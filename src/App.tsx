@@ -1,3 +1,5 @@
+
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 
@@ -9,14 +11,14 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <BrowserRouter>
-      <body className="bg-white dark:bg-mainExtraDarkBlue">
+        <Navbar/>
         <main>
           <Routes>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
           </Routes>
         </main>
-      </body>
+
     </BrowserRouter>
   );
 }
