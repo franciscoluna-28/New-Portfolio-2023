@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router";
 import { NavigationButtonProps as Navigation } from "../Interfaces/NavigationButtonProps";
+import "../directives/buttons.css"
 
-export default function NavigationButton({ text, route }: Navigation) {
+export default function NavigationButton({ text, route, styleClass }: Navigation) {
   const navigate = useNavigate();
 
   const navigateToPage = (route: string) => {
@@ -10,13 +11,8 @@ export default function NavigationButton({ text, route }: Navigation) {
 
   return (
     <button
-      className="bg-mainDarkCyan flex justify-items-start
-          justify-center items-center duration-300 ease-in h-14 text-silver font-regular
-          hover:text-main-extra-dark-blue w-64 hover:border-transparent 
-          rounded glow-secondary border-none text-white 
-          dark:bg-mainCyan dark:text-mainExtraDarkBlue"
-      onClick={() => navigateToPage(route)}
-    >
+      className={styleClass}
+      onClick={() => navigateToPage(route)}>
       {text}
     </button>
   );
