@@ -1,3 +1,41 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.liNav{
+    @apply uppercase hover:text-white ease-out duration-500
+}
+
+.link-underline {
+    border-bottom-width: 0;
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#fff, #fff);
+    background-size: 0 3px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size .5s ease-in-out;
+    padding-bottom: 2.5px;
+}
+
+.link-underline-black {
+    background-image: linear-gradient(transparent, transparent), linear-gradient(#66FCF1, #66FCF1)
+}
+
+.link-underline:hover {
+    background-size: 100% 3px;
+    background-position: 0 100%
+}
+
+body {
+    background-color: white;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #0B0C10;
+    }
+  }
+
+  .animate-fade-in {
+    opacity: 1;
+    animation-duration: 1s;
+  }
