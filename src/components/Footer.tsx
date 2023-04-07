@@ -28,11 +28,14 @@ const socialMedia = [
 
 const Footer = () => {
   return (
-    <footer className="flex justify-center gap-4 py-4">
+    <footer className="flex justify-center gap-4 m-4">
       {socialMedia.map((socialMediaCard) => (
         <FooterCard key={socialMediaCard.id} icon={<FontAwesomeIcon icon={socialMediaCard.icon} />} socialLink={socialMediaCard.link} styleClass="footer-card" />
+        
       ))}
+ 
     </footer>
+    
   );
 };
 
