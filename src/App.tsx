@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
+import Projects from "./pages/Proyects";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
+            <Route path="projects" element={<Projects />} />
           </Routes>
         </main>
 
