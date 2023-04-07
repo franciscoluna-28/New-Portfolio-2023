@@ -129,3 +129,7 @@ a:hover {
     background: radial-gradient(circle, rgba(13, 14, 19, 0.35477941176470584) 0%, rgba(12, 17, 23, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0d0e13", endColorstr="#0c1117", GradientType=1);
 }
+
+.error-image {
+    filter: drop-shadow(.5em .5em 30em #66FCF1);
+}
