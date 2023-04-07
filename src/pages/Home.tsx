@@ -2,7 +2,7 @@ import personalImage from "../assets/testImage.jpg";
 import NavigationButton from "../components/NavigationButton";
 import Footer from "../components/Footer";
 import SkillsIcons from "../components/SkillIscons";
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import "../utils/glowStyles.css";
 
