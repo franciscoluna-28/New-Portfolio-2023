@@ -1,4 +1,8 @@
-import { BrowserRouter, Routes, Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from "react-router-dom";
+import {Route, 
+  createBrowserRouter, 
+  createRoutesFromElements,
+  RouterProvider } from "react-router-dom";
+  
 import "./App.css";
 
 // Pages
@@ -10,25 +14,19 @@ import NotFound from "./pages/NotFound";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout/>}>
-    <Route index element={<Home />} />
-    <Route path="about" element={<About />} />
-    <Route path="projects" element={<Projects />} />
-    <Route path="*" element={<NotFound/>} />
-    
-
+    <Route path="/" element={<RootLayout />}>
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="projects" element={<Projects />} />
+      <Route path="*" element={<NotFound />} />
     </Route>
-
   )
 )
 
 function App() {
   return (
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   );
 }
 
 export default App;
-
-// The difference between Link and Navlink is that the last component includes
-// the active attribute within the HTML. It's useful to style active links
