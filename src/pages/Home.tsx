@@ -17,8 +17,8 @@ export default function Home() {
         <div className="flex flex-col items-center lg:grid lg:grid-flow-col lg:gap-12 lg:justify-center lg:px-8">
         <figure className="py-4">
       <img
-        className="h-64 w-64 rounded-full max-1279:h-48 max-1279:w-48 border-white animate border-2 border-double main-image p-1 
-            floating max-767:h-32 max-767:w-32 glow-main lg:h-72 lg:w-72"
+        className="h-52 w-52 rounded-full border-white animate border-2 border-double main-image p-1 
+            floating glow-main lg:h-72 lg:w-72"
         src={personalImage}
         alt="Francisco Luna"
       ></img>
@@ -71,7 +71,6 @@ export default function Home() {
       
       
     </section>
-    <Footer></Footer>
     </motion.div>
   );
 
