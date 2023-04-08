@@ -3,9 +3,12 @@ import { FaBars } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import "../styles/navbar.css"
+import { Toggle } from './DarkModeSwitch';
+
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -15,10 +18,15 @@ export default function Navbar() {
     <>
       <header className="bg-transparent p-8 lg:p-6">
         <nav className="flex lg:justify-center">
+
+
+
           <FaBars
             className="bars"
             onClick={toggleMenu}
           />
+          
+
           <AnimatePresence>
             {isMenuOpen && (
               <>
@@ -73,6 +81,9 @@ export default function Navbar() {
                   >
                     Contact
                   </NavLink>
+                  <div className='p-4'>
+                  <Toggle/>
+                  </div>
                 </motion.section>
               </>
             )}
@@ -94,9 +105,11 @@ export default function Navbar() {
             <NavLink className="nav-link" to="/contact">
               Contact
             </NavLink>
+            <Toggle/>
           </section>
 
         </nav>
+        
       </header>
     </>
   );
