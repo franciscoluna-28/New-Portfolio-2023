@@ -1,7 +1,11 @@
 module.exports = {
+  darkMode: 'class',
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundColor: {
+        dark: '#0B0C10',
+      },
       colors: {
         mainExtraDarkBlue: "#0B0C10",
         mainDarkBlue: "#1F2833",
@@ -15,4 +19,9 @@ module.exports = {
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+    },
+  },
 };
