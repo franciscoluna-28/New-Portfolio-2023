@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import RootLayout from "./layouts/RootLayout";
 import NotFound from "./pages/NotFound";
+import { ThemeProvider } from "./context/DarkModeContext";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,7 +25,11 @@ const router = createBrowserRouter(
 
 function App() {
   return (
+
+    <ThemeProvider>
     <RouterProvider router={router} />
+    </ThemeProvider>
+
   );
 }
 
