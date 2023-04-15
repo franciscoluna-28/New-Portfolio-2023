@@ -15,7 +15,21 @@ export default function Projects() {
            text-mainDarkCyan dark:text-white lg:text-5xl my-12 pl-3 relative dark:main-title">
    My Projects
 </h1>
-
+<div className="dropdown dropdown-bottom">
+  <label tabIndex={0} className="btn m-1">Filter By Main Technology</label>
+  <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>React</a></li>
+    <li><a>TypeScript</a></li>
+  </ul>
+</div>
+<div className="dropdown dropdown-bottom">
+  <label tabIndex={0} className="btn m-1">Filter By Tags</label>
+  <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+    <li><a>None</a></li>
+    <li><a>React Hooks</a></li>
+    <li><a>SASS</a></li>
+  </ul>
+</div>
                 <div className='flex gap-8 justify-center flex-wrap'>
 
             
