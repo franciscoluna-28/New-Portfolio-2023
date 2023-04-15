@@ -18,7 +18,7 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
   variants: {
     extend: {
       backgroundColor: ['dark'],
