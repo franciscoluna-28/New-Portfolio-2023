@@ -9,7 +9,7 @@ export default function RootLayout(){
         <main>
         <Outlet/>
         <Footer/>
-        <span className="mb-16 flex justify-center dark:text-mainDarkBlue">© Copyright 2023 Francisco Luna</span>
+        <span className="flex py-4 justify-center dark:text-mainDarkBlue">© Copyright 2023 Francisco Luna</span>
         </main>
         </>
     )
