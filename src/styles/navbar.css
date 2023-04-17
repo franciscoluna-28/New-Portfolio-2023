@@ -15,5 +15,5 @@
 }
 
 .nav-link{
-    @apply dark:text-mainSilver  dark:hover:text-white text-gray-800 border-l-4 p-2 duration-200 border-transparent dark:hover:border-l-mainCyan hover:border-l-mainDarkCyan hover:text-mainDarkCyan
+    @apply dark:text-mainSilver  dark:hover:text-white text-mainExtraDarkBlue/70 border-l-4 p-2 duration-200 border-transparent dark:hover:border-l-mainCyan hover:border-l-mainDarkCyan hover:text-mainDarkCyan
 }
