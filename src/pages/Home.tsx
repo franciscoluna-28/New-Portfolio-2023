@@ -2,6 +2,7 @@ import personalImage from "../assets/testImage.jpg";
 import NavigationButton from "../components/Buttons/NavigationButton";
 import SkillsIcons from "../components/Icons/SkillIscons";
 import { motion } from 'framer-motion';
+import Footer from "../components/Footer";
 
 import "../utils/glowStyles.css";
 
@@ -16,7 +17,7 @@ export default function Home() {
           <div className="flex flex-col items-center lg:grid lg:grid-flow-col lg:gap-12 lg:justify-center lg:px-8">
             <figure className="py-4">
               <img
-                className="h-52 w-52 rounded-full border-white animate border-2 border-double main-image p-1 
+                className="h-52 w-52 z-40 rounded-full border-white animate border-2 border-double main-image p-1 
             floating glow-main lg:h-72 lg:w-72"
                 src={personalImage}
                 alt="Francisco Luna"
@@ -36,7 +37,7 @@ export default function Home() {
                 </h2>
                 <p
                   className="text-silver leading-loose py-2 text-left w-auto max-639:w-72 max-639:m-auto max-639:text-center text-xl dark:text-mainSilver
-            text-mainDarkBlue"
+            text-mainDarkBlue/70"
                 >
                   18 years old Front End Developer from Venezuela. Currently
                   studying a Computer Science Major and working on personal
@@ -68,6 +69,7 @@ export default function Home() {
           </div>
         </article>
       </section>
+      <Footer/>
     </motion.div>
   );
 
