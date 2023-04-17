@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import "../../styles/navbar.css"
 import { Toggle } from '../Switches/DarkModeSwitch';
+import "../../utils/glowStyles.css"
 
 
 export default function Navbar() {
@@ -16,7 +17,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="bg-transparent p-8 lg:p-6">
+      <header className="p-8 lg:p-6 sticky top-0 z-50 dark:bg-mainExtraDarkBlue/90 bg-white/90 shadow-lg">
         <nav className="flex lg:justify-center">
 
 
@@ -25,7 +26,7 @@ export default function Navbar() {
             className="bars"
             onClick={toggleMenu}
           />
-          
+
 
           <AnimatePresence>
             {isMenuOpen && (
@@ -82,7 +83,7 @@ export default function Navbar() {
                     Contact
                   </NavLink>
                   <div className='p-4'>
-                  <Toggle/>
+                    <Toggle />
                   </div>
                 </motion.section>
               </>
@@ -105,11 +106,11 @@ export default function Navbar() {
             <NavLink className="nav-link" to="/contact">
               Contact
             </NavLink>
-            <Toggle/>
+            <Toggle />
           </section>
 
         </nav>
-        
+
       </header>
     </>
   );
