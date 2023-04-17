@@ -12,7 +12,7 @@ export default function PersonalProjects() {
     : createdProjects;
 
   return (
-    <div className="flex gap-8 justify-center flex-wrap">
+    <div className="flex gap-4 lg:gap-10 justify-center flex-wrap">
       {filteredProjects.map((project) => (
         <ProjectCard {...project} />
       ))}
