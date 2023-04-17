@@ -1,6 +1,6 @@
 import personalImage from "../assets/testImage.jpg";
-import NavigationButton from "../components/NavigationButton";
-import SkillsIcons from "../components/SkillIscons";
+import NavigationButton from "../components/Buttons/NavigationButton";
+import SkillsIcons from "../components/Icons/SkillIscons";
 import { motion } from 'framer-motion';
 
 import "../utils/glowStyles.css";
