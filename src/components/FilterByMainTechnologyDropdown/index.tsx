@@ -2,6 +2,9 @@
 import { useContext } from 'react';
 import { MainTechnologyContext } from '../../context/MainTechnologyContext';
 import { useState } from 'react'
+import "./styles.css"
+import "../../utils/glowStyles.css";
+
 
 export function FilterByMainTechnology() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,11 +16,12 @@ export function FilterByMainTechnology() {
   }
 
   return (
-    <div className="relative inline-block text-left z-50">
+    <div className="relative inline-block text-left z-40 mb-8">
       <div>
         <button
           type="button"
-          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-mainExtraDarkBlue dark:bg-mainDarkBlue dark:text-mainSilver
+           rounded-md shadow-md dark:hover:bg-mainDarkBlue/50 focus:outline-none focus:ring-2 ring-mainExtraDarkBlue/50"
           id="filter-menu"
           aria-haspopup="true"
           aria-expanded="true"
@@ -41,28 +45,39 @@ export function FilterByMainTechnology() {
       </div>
 
       {isOpen && (
-        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+        <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg dark:bg-mainDarkBlue bg-white ring-1 ring-black ring-opacity-5 p-4">
           <div className="py-1" role="none">
             <button
-              className="text-gray-700 block px-4 py-2 text-sm w-full text-left hover:bg-gray-100"
+              className="text-gray-700 dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
+              dark:hover:bg-mainExtraDarkBlue/50 rounded-md hover:text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan"
               onClick={() => handleTechnologyChange("")}
               role="menuitem"
             >
               All
             </button>
             <button
-              className="text-gray-700 block px-4 py-2 text-sm w-full text-left hover:bg-gray-100"
+              className="text-gray-700 dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
+              dark:hover:bg-mainExtraDarkBlue/50 rounded-md hover:text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan"
               onClick={() => handleTechnologyChange("TypeScript")}
               role="menuitem"
             >
               TypeScript
             </button>
             <button
-              className="text-gray-700 block px-4 py-2 text-sm w-full text-left hover:bg-gray-100"
+              className="text-gray-700 dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
+              dark:hover:bg-mainExtraDarkBlue/50 rounded-md hover:text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan"
               onClick={() => handleTechnologyChange("React")}
               role="menuitem"
             >
               React
+            </button>
+            <button
+              className="text-gray-700 dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
+              dark:hover:bg-mainExtraDarkBlue/50 rounded-md hover:text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan"
+              onClick={() => handleTechnologyChange("NodeJS")}
+              role="menuitem"
+            >
+              NodeJS
             </button>
           </div>
         </div>
