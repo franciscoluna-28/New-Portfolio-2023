@@ -1,8 +1,8 @@
 export default function About() {
     return ( 
         <div className="about">
-            <h2>about uwu</h2>
-            <p>od43prp3irpr4p3ikr44p3i3i4pr</p>
+            <h2>Dude I was just learning how to use the React Router</h2>
+            <p>2 weeks ago so I experimented with random messages XD</p>
         </div>
      );
 }
