@@ -1,8 +1,7 @@
 import { useContext, useCallback, useState, useEffect } from "react";
 import { ThemeContext } from "../../context/DarkModeContext";
-/* import { faMoon } from "@fortawesome/free-solid-svg-icons";
-import { faSun } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; */
+import { FaMoon } from "react-icons/fa";
+import { BsSunFill } from "react-icons/bs"
 
 export const Toggle = () => {
     const { theme, setTheme } = useContext(ThemeContext);
@@ -32,7 +31,7 @@ export const Toggle = () => {
 
     return (
         <button onClick={toggleTheme} className="peer">
-            {isDark() ? "Switch to Light Mode" : "Switch to Dark Mode"}
+            {isDark() ? <FaMoon/> : <BsSunFill/>}
         </button>
     )
 }
