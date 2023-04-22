@@ -24,6 +24,8 @@ export interface project {
 }
 
 // Component template 
+
+// Component template 
 export default function ProjectCard({ image, title, description, githubLink, deploymentLink,  tags, mainTechnology }: project) {
     const isValidGithubLink = githubLinkRegex.test(githubLink);
     const isValidNetlifyLink = netlifyLinkRegex.test(deploymentLink);
