@@ -7,7 +7,7 @@ export const createdProjects: Array<project> = [
     {
         image: BlogProject,
         title: "Personal Blog",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at turpis odio. Ut sodales velit ac tincidunt pretium. Vestibulum ante eros, ultrices quis laoreet id, iaculis at ligula. Curabitur dapibus sapien mi. Donec in ullamcorper tortor, nec auctor elit. In at tellus libero. Morbi viverra, odio ut laoreet consequat, lacus quam dapibus ante, sed imperdiet ipsum purus et felis. Cras eu sollicitudin nisl, eget tincidunt augue. Nunc nec augue a velit vestibulum tincidunt vitae at magna.",
+        description: "Explore the world of music through my personal blog! Learn fun facts while seeing TypeScript and SASS in action. This project helped me grasp TypeScript fundamentals and master efficient styling with SASS. Listen to my official Spotify playlist while reading to fully immerse yourself in the musical experience. Join me on this journey of discovery and learn something new today!",
         githubLink: "https://github.com/franciscoluna-28/Song-Blog-Beta",
         deploymentLink:"https://music-blog-beta-ts-sass.netlify.app",
         tags: ["SASS", "Components and Mixins"],
@@ -16,7 +16,7 @@ export const createdProjects: Array<project> = [
     {
         image: WeatherAppProject,
         title: "Weather App",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at turpis odio. Ut sodales velit ac tincidunt pretium. Vestibulum ante eros, ultrices quis laoreet id, iaculis at ligula. Curabitur dapibus sapien mi. Donec in ullamcorper tortor, nec auctor elit. In at tellus libero. Morbi viverra, odio ut laoreet consequat, lacus quam dapibus ante, sed imperdiet ipsum purus et felis. Cras eu sollicitudin nisl, eget tincidunt augue. Nunc nec augue a velit vestibulum tincidunt vitae at magna.",
+        description: "Stay ahead of the weather with this user-friendly app built with React! No more guessing what to wear or if you need an umbrella. With real-time weather data and intuitive interface, you'll always be prepared for whatever mother nature throws your way. And the best part? This app is built with the latest React technology, ensuring top-notch performance and reliability. Let's weather the storm together with this innovative app.",
         githubLink: "https://github.com/franciscoluna-28/Weather-App-React-and-TailwindCSS",
         deploymentLink: "https://weather-app-tailwind-react.netlify.app",
         tags: ["Hooks", "TaiwlindCSS", "API"],
@@ -25,7 +25,7 @@ export const createdProjects: Array<project> = [
     {
         image: QRCodeApp,
         title: "QR COode Generator",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at turpis odio. Ut sodales velit ac tincidunt pretium. Vestibulum ante eros, ultrices quis laoreet id, iaculis at ligula. Curabitur dapibus sapien mi. Donec in ullamcorper tortor, nec auctor elit. In at tellus libero. Morbi viverra, odio ut laoreet consequat, lacus quam dapibus ante, sed imperdiet ipsum purus et felis. Cras eu sollicitudin nisl, eget tincidunt augue. Nunc nec augue a velit vestibulum tincidunt vitae at magna.",
+        description: "Create QR codes on-the-go with my QR Code Generator project! Built with NodeJS and Express, this app allows you to easily generate QR codes for any purpose, from promoting your business to sharing personal information. With the power of middleware, the app ensures that your data is secure and only accessible to authorized users. Whether you need to create a QR code for a website, a product, or simply for fun, this project has got you covered. Try it out now and see how easy it is to create your own QR codes with just a few clicks!",
         githubLink: "https://github.com/franciscoluna-28/QR-Code-Generator-Node-JS",
         deploymentLink: "https://qr-code-application-node-js.onrender.com",
         tags: ["NodeJS", "Express", "Middleware"],
