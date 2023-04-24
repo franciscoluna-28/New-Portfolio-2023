@@ -9,8 +9,8 @@ export const linkRegex = /(?:\.{2}\/)*[\w-]+(?:\/[\w-]+)*\.(?:jpg|jpeg|png|gif)/
 export const titleRegex = /^[a-zA-Z]+$/;
 
 // Checking Github, Netlify and other platforms links 
-const githubLinkRegex: RegExp = /^(https?:\/\/)?(www\.)?github\.com\/[\w-]+(\/[\w-]+)*\/?$/i;
-const netlifyLinkRegex: RegExp = /^(https?:\/\/)?(www\.)?netlify\.com\/[\w-]+(\/[\w-]+)*\/?$|^((?!netlify\.com).)*$/i;
+const githubLinkRegex = /^(https?:\/\/)?(www\.)?github\.com\/[\w-]+(\/[\w-]+)*\/?$/i;
+const netlifyLinkRegex = /^(https?:\/\/)?(www\.)?netlify\.com\/[\w-]+(\/[\w-]+)*\/?$|^((?!netlify\.com).)*$/i;
 
 // Interface for the card component
 export interface project {
