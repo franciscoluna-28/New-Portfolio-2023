@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React, { createContext, useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
@@ -13,7 +14,7 @@ interface ThemeProviderProps {
 
 export const ThemeContext = createContext<ThemeContextProps>({
     theme: 'light',
-    setTheme: () => { },
+    setTheme: () => {},
 });
 
 export const ThemeProvider = ({ children }: ThemeProviderProps) => {
