@@ -11,6 +11,7 @@ interface TechnologyProviderProps {
 
 export const MainTechnologyContext = createContext<ContextProps>({
   selectedTechnology: '',
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   setSelectedTechnology: () => {},
 });
 
