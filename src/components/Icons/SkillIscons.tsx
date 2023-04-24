@@ -16,7 +16,9 @@ import {
     SiSass,
     SiVite,
     SiNotion,
+    SiMysql
 } from "react-icons/si";
+
 
 import CustomFontAwesomeIcon from "./CustomFontAwesomeIcon";
 import ReactIcon from "./ReactIcon"
@@ -81,7 +83,12 @@ const siliconIcons = [{
 {
     icon: SiNotion,
     id: 8
-}]
+}, 
+{
+    icon: SiMysql,
+    id: 9
+}
+]
 
 
 
