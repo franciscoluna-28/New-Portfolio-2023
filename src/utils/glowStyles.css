@@ -25,6 +25,12 @@ strong {
     -moz-box-shadow: 0px 0px 45px 3px rgba(45, 255, 196, 0.3);
     box-shadow: 0px 0px 45px 3px rgba(45, 255, 196, 0.04);
 }
+.glow-secondary-3 {
+    -webkit-box-shadow: 0px 0px 10px 1000px rgba(45, 255, 196, 0.04);
+    -moz-box-shadow: 0px 0px 10px 1000px rgba(45, 255, 196, 0.3);
+    box-shadow: 0px 0px 100px 300px rgba(45, 255, 196, 0.04);
+    overflow:hidden
+}
 
 @keyframes floater {
     0% {
@@ -133,4 +139,12 @@ a:hover {
 
 .error-image {
     filter: drop-shadow(.5em .5em 30em #66FCF1);
+}
+
+.swiper-pagination-progressbar-fill {
+    background-color: #45A293  !important;
+  }
+
+.dark .swiper-pagination-progressbar-fill {
+    background-color: #66FCF1 !important; 
 }
