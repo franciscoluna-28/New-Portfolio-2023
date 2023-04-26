@@ -26,7 +26,7 @@ export const createdProjects: Array<project> = [
     },
     {
         image: QRCodeApp,
-        title: "QR COode Generator",
+        title: "QR Code Generator",
         description: "Create QR codes on-the-go with my QR Code Generator project! Built with NodeJS and Express, this app allows you to easily generate QR codes for any purpose, from promoting your business to sharing personal information. With the power of middleware, the app ensures that your data is secure and only accessible to authorized users. Whether you need to create a QR code for a website, a product, or simply for fun, this project has got you covered. Try it out now and see how easy it is to create your own QR codes with just a few clicks!",
         githubLink: "https://github.com/franciscoluna-28/QR-Code-Generator-Node-JS",
         deploymentLink: "https://qr-code-application-node-js.onrender.com",
