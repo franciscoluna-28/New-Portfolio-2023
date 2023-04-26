@@ -8,12 +8,15 @@ import ServiceCard from "../components/ServiceCard";
 import Rocket from "../assets/services/growth.jpg"
 import Responsive from "../assets/services/responsive.jpg"
 import Customization from "../assets/services/customization.jpg"
-import BlogProject from "../assets/projects/blog.png"
-import WeatherAppProject from "../assets/projects/weather-app.png"
+import { FaCheck } from "react-icons/fa";
+import { BsCheck } from "react-icons/bs";
+
 
 
 import "../utils/glowStyles.css";
 import BuyMeACoffee from "../components/BuyMeACoffee";
+import ProjectsCarousel from "../components/ProjectsCarousel";
+import Services from "../components/Services";
 
 
 export default function Home() {
@@ -81,69 +84,42 @@ export default function Home() {
 
           </div>
 
+      <div className="flex flex-col justify-center items-center">
+          <h3
+                  className="font-bold lex text-left max-639:justify-center max-639:text-4xl main
+           text-mainDarkCyan dark:text-white lg:text-3xl"
+                >
+                  See some of my
+                </h3>
+                <h4 className="text-mainDarkBlue dark:text-mainCyan font-bold text-lg text-left 
+      flex py-2 max-639:justify-center lg:text-2xl">
+                  Projects
+                </h4>
+                <p className="dark:text-mainSilver/50 mb-6">As a Front End Developer</p>
+                <NavigationButton text={"My projects"} route={"./projects"} styleClass={"primary-button mb-8"}/>
+                </div>
 
-          <div id="indicators-carousel" className="relative w-full" data-carousel="static">
+          <ProjectsCarousel/>
+<Services/>
+          
 
-    <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
 
-        <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <img src="https://scontent.fccs3-2.fna.fbcdn.net/v/t1.6435-9/67262464_722163731572759_6822103246690058240_n.jpg?stp=cp0_dst-jpg_e15_q65_s320x320&_nc_cat=100&ccb=1-7&_nc_sid=8024bb&_nc_ohc=klS53OWsN_IAX88JDww&_nc_ht=scontent.fccs3-2.fna&oh=00_AfC6lnymmavtQLiBCe28Qb-kgykq23Hrvzu8WjHYN8YdwA&oe=646E5B5D" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={BlogProject} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={WeatherAppProject} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={BlogProject} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-
-        <div className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src={WeatherAppProject} className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."/>
-        </div>
-    </div>
-
-    <div className="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2">
-        <button type="button" className="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
-        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-        <button type="button" className="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
-    </div>
-
-    <button type="button" className="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
-            <span className="sr-only">Previous</span>
-        </span>
-    </button>
-    <button type="button" className="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-        <span className="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg aria-hidden="true" className="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
-            <span className="sr-only">Next</span>
-        </span>
-    </button>
-</div>
 
 
 
 
         </article>
-        <h2 className="font-bold text-4xl flex text-left max-639:justify-center max-639:text-4xl main
-           text-mainDarkCyan dark:text-white lg:text-5xl py-16">My Services</h2>
-        <div className="grid grid-flow-col gap-8 py-16">
 
-          <ServiceCard title={"Grow your business or brand"} description={"As a software developer, I offer services to help you grow your business or brand. I specialize in developing custom websites to meet your specific needs, whether it's a landing page, blog or business, we could take care of that. With my expertise in programming languages and technologies such as TypeScript, MySQL, NodeJS, Express, MongoDB, ReactJS and Prisma, I can create efficient and effective software that will help you streamline your business operations, reach more customers, and stand out in your industry. Let's work together to take your business to the next level!"}
-            image={Rocket} />
-          <ServiceCard title={"Responsive Design"} description={"I offer responsive design services to help you grow your business or brand. With the increasing number of mobile users, having a website that adapts to different screen sizes is crucial. I specialize in creating custom websites that are optimized for mobile devices and desktops alike, ensuring that your website looks great and functions flawlessly on any device"}
-            image={Responsive} />
-          <ServiceCard title={"Customization"} description={"I offer customization services to help you make your website unique and tailored to your brand. Whether it's changing the color scheme, font choices, or layout, I can work with you to create a design that aligns with your vision and stands out from the competition. Additionally, I can help you integrate custom features and functionalities to enhance the user experience and improve the functionality of your website. Let's work together to create a customized website that will elevate your online presence and attract more visitors."}
-            image={Customization} />
-        </div>
+
+
+
+
+
+
+
+
+
+
         <div className="py-20">
           <h2
             className="font-bold text-4xl flex justify-center text-left max-639:justify-center max-639:text-4xl main
