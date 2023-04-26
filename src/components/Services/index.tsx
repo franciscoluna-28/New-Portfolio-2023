@@ -4,14 +4,21 @@ import { BsCheck2Circle as BsCheck } from "react-icons/bs"
 export default function Services() {
     return(
         <>
-        <h2 className="font-bold text-4xl flex text-left max-639:justify-center max-639:text-4xl main
-text-mainDarkCyan dark:text-white lg:text-5xl py-8">My Services</h2>
-<div className="grid grid-flow-col gap-8 py-16">
+      <div className="flex flex-col justify-center items-center">
+          <h3
+                  className="font-bold lex text-left max-639:justify-center max-639:text-4xl main
+           text-mainDarkCyan dark:text-white lg:text-3xl pt-6"
+                >
+                  What I Offer
+                </h3>
+                <h4 className="text-mainDarkBlue dark:text-mainCyan font-bold text-lg text-left 
+      flex py-2 max-639:justify-center lg:text-2xl">
+                  Services
+                </h4>
+                <p className="dark:text-mainSilver/50 mb-6">From UI Design to Front End Development and more</p>
+                </div>
 
-{/* UI UX Design */}
-
-
-
+                <div className="grid grid-flow-row grid-cols-3 gap-4">
 
 <article className="service dark:bg-mainDarkBlue/20 rounded-b-lg w-full
 h-fit dark:hover:bg-mainDarkBlue/10 border-mainDarkCyan
@@ -50,19 +57,19 @@ dark:hover:bg-mainDarkCyan duration-300 bg-mainDarkCyan text-white font-semibold
     <div className="w-10">
      <BsCheck className="dark:text-mainCyan text-mainDarkCyan text-start text-lg"/>
      </div>
-   <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left">Creation of fully responsive websites with Flexbox and CSS Grid.</p>
+   <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left font-semibold">Creation of fully responsive websites with Flexbox and CSS Grid.</p>
  </li>
  <li className="flex flex-row gap-4 mb-3">
  <div className="w-10">
      <BsCheck className="dark:text-mainCyan text-mainDarkCyan text-start text-lg"/>
      </div>
-   <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left">I use modern technologies like React, TypeScript, SASS, Tailwind and Express for creating a professional website.</p>
+   <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left font-semibold">I use modern technologies like React, TypeScript, SASS, Tailwind and Express for creating a professional website.</p>
  </li>
  <li className="flex flex-row gap-4 mb-3">
  <div className="w-10">
      <BsCheck className="dark:text-mainCyan text-mainDarkCyan text-start text-lg"/>
      </div>
-   <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left">API integrations, component creation, organized stylesheets, and various frontend functionalities like forms and authentication are implemented to ensure your website is tailored to your needs.</p>
+   <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left font-semibold">API integrations, component creation, organized stylesheets, and various frontend functionalities like forms and authentication are implemented to ensure your website is tailored to your needs.</p>
  </li>
 </ul>
 </article>
@@ -98,6 +105,7 @@ dark:hover:bg-mainDarkCyan duration-300 bg-mainDarkCyan text-white font-semibold
 </article>
 </div>
 </>
+
     )
 }
 
