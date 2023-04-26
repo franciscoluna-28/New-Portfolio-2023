@@ -21,6 +21,7 @@ export interface project {
     deploymentLink: string
     tags: Array<string>
     mainTechnology: string
+    id: number
 }
 
 // Component template 
@@ -31,7 +32,7 @@ export default function ProjectCard({ image, title, description, githubLink, dep
     const isValidNetlifyLink = netlifyLinkRegex.test(deploymentLink);
 
     return (
-        <div className="card w-auto max-w-xl shadow-xl dark:bg-gradient-to-r dark:from-mainDarkBlue/50 dark:to-mainDarkBlue/30 lg:hover:scale-105 duration-300">
+        <div className="card w-auto h-fit max-w-xl shadow-xl dark:bg-gradient-to-r dark:from-mainDarkBlue/50 dark:to-mainDarkBlue/30 lg:hover:scale-105 duration-300">
             <figure><img className='' src={image} alt="Project" /></figure>
             <div className="card-body">
                 <h2 className="card-title dark:text-white text-black font-bol">
