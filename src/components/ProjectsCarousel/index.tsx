@@ -12,7 +12,7 @@ import NavigationButton from '../Buttons/NavigationButton';
 
 export default function ProjectsCarousel () { 
     return(
-        <div className="shadow-md">
+        <div className="shadow-md max-w-fit max-h-fit">
 
 <Swiper
         effect={"coverflow"}
@@ -34,7 +34,7 @@ export default function ProjectsCarousel () {
           
         }}
         autoplay={{
-            delay: 5000,
+            delay: 8000,
             disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, Navigation]}
@@ -47,26 +47,18 @@ export default function ProjectsCarousel () {
     return (
 <SwiperSlide key={project.id}>
   <div className="relative">
-    <img className='w-full h-fit rounded-md overflow-hidden pt-4 filter brightness-75 hover:blur-sm duration-300 ease-in' src={project.image} alt={project.title} />
-    <div className="top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 absolute inset-0 opacity-0 hover:opacity-100 transition-opacity duration-300">
-        <div className="bg-gray-700 bg-opacity-75 rounded-full p-2 mr-4">
-          <a href={project.githubLink} target="_blank" rel="noreferrer">
-            <FaGithub className='text-white text-xl'/>
-          </a>
-        </div>
-        <div className="bg-gray-700 bg-opacity-75 rounded-full p-2">
-          <a href={project.deploymentLink} target="_blank" rel="noreferrer">
-            <SiNetlify className='text-white text-xl'/>
-          </a>
-        </div>
+    <img className='w-full h-fit rounded-md overflow-hidden pt-4 filter brightness-75 duration-300 ease-in blur-sm' src={project.image} alt={project.title} />
+    <div className="absolute inset-0 bg-black/70 flex items-center justify-center p-32">
+      <div className="text-white text-center">
+        <h3 className='font-bold text-6xl mb-4'>{project.title}</h3>
+        <p className='text-mainSilver leading-loose text-center text-xl font-medium'>{project.description}</p>
+        <a href='/projects'><span className='text-xl font-bold dark:text-mainCyan text-mainDarkCyan py-2'>Learn More</span></a>
       </div>
-    <div className="absolute bottom-0 w-full bg-black/80 p-4">
-      <h3 className='text-white font-bold mb-2'>{project.title}</h3>
-      <p className='text-gray-400'>{project.description}</p>
-
     </div>
   </div>
 </SwiperSlide>
+
+
     );
   })}
 </Swiper>
