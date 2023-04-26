@@ -11,7 +11,8 @@ export const createdProjects: Array<project> = [
         githubLink: "https://github.com/franciscoluna-28/Song-Blog-Beta",
         deploymentLink:"https://music-blog-beta-ts-sass.netlify.app",
         tags: ["SASS", "Components and Mixins"],
-        mainTechnology: "TypeScript"
+        mainTechnology: "TypeScript",
+        id: 1
     },
     {
         image: WeatherAppProject,
@@ -20,7 +21,8 @@ export const createdProjects: Array<project> = [
         githubLink: "https://github.com/franciscoluna-28/Weather-App-React-and-TailwindCSS",
         deploymentLink: "https://weather-app-tailwind-react.netlify.app",
         tags: ["Hooks", "TaiwlindCSS", "API"],
-        mainTechnology: "React"
+        mainTechnology: "React",
+        id: 2
     },
     {
         image: QRCodeApp,
@@ -29,7 +31,8 @@ export const createdProjects: Array<project> = [
         githubLink: "https://github.com/franciscoluna-28/QR-Code-Generator-Node-JS",
         deploymentLink: "https://qr-code-application-node-js.onrender.com",
         tags: ["NodeJS", "Express", "Middleware"],
-        mainTechnology: "NodeJS"
+        mainTechnology: "NodeJS",
+        id: 3
     }
 ]
 
