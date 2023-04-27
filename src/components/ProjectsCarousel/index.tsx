@@ -1,5 +1,3 @@
-import { FaGithub } from 'react-icons/fa';
-import { SiNetlify } from 'react-icons/si';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, EffectCards } from 'swiper';
 import { createdProjects } from '../PersonalProjects/data';
@@ -8,7 +6,7 @@ import "../../utils/glowStyles.css";
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
-import NavigationButton from '../Buttons/NavigationButton';
+
 
 export default function ProjectsCarousel () { 
     return(
@@ -46,12 +44,12 @@ export default function ProjectsCarousel () {
   {createdProjects.map((project) => {
     return (
 <SwiperSlide key={project.id}>
-  <div className="relative">
-    <img className='w-full h-fit rounded-md overflow-hidden pt-4 filter brightness-75 duration-300 ease-in blur-sm' src={project.image} alt={project.title} />
+  <div className="relative bg-center">
+    <img className='w-full cover-full min-w-min h-fit rounded-md overflow-hidden pt-4 filter brightness-75 duration-300 ease-in blur-sm' src={project.image} alt={project.title} />
     <div className="absolute inset-0 bg-black/70 flex items-center justify-center p-32">
       <div className="text-white text-center">
-        <h3 className='font-bold text-6xl mb-4'>{project.title}</h3>
-        <p className='text-mainSilver leading-loose text-center text-xl font-medium'>{project.description}</p>
+        <h3 className='font-bold text-3xl lg:text-6xl lg:mb-4'>{project.title}</h3>
+        <p className='text-mainSilver hidden leading-loose sm:block text-center text-base font-medium'>{project.description}</p>
         <a href='/projects'><span className='text-xl font-bold dark:text-mainCyan text-mainDarkCyan py-2'>Learn More</span></a>
       </div>
     </div>
