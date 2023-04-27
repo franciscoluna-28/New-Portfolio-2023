@@ -39,7 +39,16 @@ export default function Home() {
                 alt="Francisco Luna"
               ></img>
             </figure>
+
+
+
             <div className="px-auto lg:px-16">
+
+
+
+
+
+              <motion.div>
               <article className="py-4">
                 <h1
                   className="font-bold text-4xl flex text-left py-2 max-639:justify-center max-639:text-4xl main
@@ -61,6 +70,7 @@ export default function Home() {
                   project. Here you'll be able to see my projects and reach me,  I'll be glad to help.
                 </p>
               </article>
+              </motion.div>
 
               <div className="w-full flex gap-4 flex-col md:flex-row">
                 <NavigationButton
@@ -69,7 +79,7 @@ export default function Home() {
                   styleClass={"primary-button"}
                 />
                 <div className="w-full">
-                  <a href="/public/Francisco Luna 2023 Resume EN.pdf" download="">
+                  <a href="https://drive.google.com/uc?export=download&id=1dyDveL2OwgV9bIb7XbXJsJUGvZedIhcO" download="">
                     <button className={"secondary-button"}>My CV in English</button>
                   </a>
                 </div>
@@ -89,6 +99,12 @@ export default function Home() {
 
           </div>
 
+          <motion.div
+    viewport={{once: false}}
+      initial={{opacity: 0, x: 50}}
+      whileInView={{opacity: 1, x:0}}
+      transition={{type: "spring", duration: 1, delay: .15}}
+      >
           <div className="flex flex-col justify-center items-center py-12">
     <h3
             className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
@@ -101,10 +117,12 @@ flex py-2 max-639:justify-center lg:text-3xl">
             That I've created
           </h4>
           <p className="dark:text-mainSilver/80 md:text-xl">See what I'm able to do</p>
-          <NavigationButton text={"My Projects"} route={"/projects"} styleClass={"primary-button my-4"}/>
+          <NavigationButton text={"My Projects"} route={"/projects"} styleClass={"primary-button my-4 w-1/4"}/>
           </div>
 
           <ProjectsCarousel />
+          </motion.div>
+
           <Services />
           <PersonalProjects />
 
@@ -120,22 +138,32 @@ flex py-2 max-639:justify-center lg:text-3xl">
 
 
 
-        <div className="py-20 w-1/2">
-          <h2
-            className="font-bold text-4xl flex justify-center text-left max-639:justify-center max-639:text-4xl main
-           text-mainDarkCyan dark:text-white lg:text-5xl py-8"
+        <div className="py-20 w-full">
+
+          <motion.div
+    viewport={{once: false}}
+      initial={{opacity: 0, x: 50}}
+      whileInView={{opacity: 1, x:0}}
+      transition={{type: "spring", duration: 1, delay: .15}}
+      >
+
+<div className="flex flex-col justify-center items-center py-12">
+    <h3
+            className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
+     text-mainDarkCyan dark:text-white lg:text-5xl"
           >
-            Where I'm
-
-
-
-          </h2>
-
-
+            Contact Me
+          </h3>
+          <h4 className="text-mainDarkBlue text-2xl dark:text-mainCyan font-bold text-left 
+flex py-2 max-639:justify-center lg:text-3xl">
+            In my Social Media
+          </h4>
+          <p className="dark:text-mainSilver/80 md:text-xl">Let's connect and create something together!</p>
+          </div>
           <p className="text-center text-mainSilver/50 py-2"></p>
-          <div className="flex gap-4 py-4 w-full flex-col">
+          <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
 
-            <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
+            <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-auto dark:hover:bg-transparent
             border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
               <div className="flex flex-col items-center">
                 <AiOutlineMail className="text-xl mb-2 dark:text-white" />
@@ -154,7 +182,7 @@ flex py-2 max-639:justify-center lg:text-3xl">
               </div>
             </section>
             <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
-            border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
+            border-2 border-transparent md:col-span-2 dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
               <div className="flex flex-col items-center">
                 <FaDiscord className="text-xl mb-2 dark:text-white" />
                 <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Discord</h5>
@@ -164,12 +192,17 @@ flex py-2 max-639:justify-center lg:text-3xl">
             </section>
 
           </div>
+
+          <div className="py-4">
           <NavigationButton
             text={"Or send me an email"}
             route={"/contact"}
             styleClass={"primary-button w-full"}
           />
+          </div>
+                  </motion.div>
         </div>
+
       </section>
 
     </motion.div>
