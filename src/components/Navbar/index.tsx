@@ -84,7 +84,7 @@ export default function Navbar() {
                   </NavLink>
 
                   <div className='w-full' onClick={toggleMenu}>
-                    <a href="/public/Francisco Luna Resume 2023 ES.pdf" download="">
+                    <a href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU" download="">
                       <button className='hamburguer-bar-link w-full text-left'>
                         My CV in Spanish
                       </button>
@@ -117,7 +117,7 @@ export default function Navbar() {
             </NavLink>
             <Toggle />
             <div className="w-full">
-              <a href="/public/Francisco Luna Resume 2023 ES.pdf" download="">
+              <a href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU" download="">
                 <button className={"primary-button"}>My CV in Spanish</button>
               </a>
             </div>
