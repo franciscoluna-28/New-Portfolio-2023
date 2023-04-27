@@ -82,14 +82,23 @@ export default function Navbar() {
                   >
                     Contact
                   </NavLink>
+
+                  <div className='w-full' onClick={toggleMenu}>
+                    <a href="/public/Francisco Luna Resume 2023 ES.pdf" download="">
+                      <button className='hamburguer-bar-link w-full text-left'>
+                        My CV in Spanish
+                      </button>
+                    </a>
+                  </div>
                   <div className='p-4'>
                     <Toggle />
                   </div>
+
                 </motion.section>
               </>
             )}
           </AnimatePresence>
-          <section className="hidden lg:flex gap-20 font-medium">
+          <section className="hidden lg:flex gap-20 font-medium items-center">
 
             <NavLink className="nav-link" to="/">
               Home
@@ -107,6 +116,11 @@ export default function Navbar() {
               Contact
             </NavLink>
             <Toggle />
+            <div className="w-full">
+              <a href="/public/Francisco Luna Resume 2023 ES.pdf" download="">
+                <button className={"primary-button"}>My CV in Spanish</button>
+              </a>
+            </div>
           </section>
 
         </nav>
