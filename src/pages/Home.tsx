@@ -2,28 +2,27 @@ import personalImage from "../assets/testImage.jpg";
 import NavigationButton from "../components/Buttons/NavigationButton";
 import SkillsIcons from "../components/Icons/SkillIscons";
 import { motion } from 'framer-motion';
-import Footer from "../components/Footer";
-import Coffee from "../assets/services/coffee.jpg"
-import ServiceCard from "../components/ServiceCard";
-import Rocket from "../assets/services/growth.jpg"
-import Responsive from "../assets/services/responsive.jpg"
-import Customization from "../assets/services/customization.jpg"
-import { FaCheck } from "react-icons/fa";
-import { BsCheck } from "react-icons/bs";
-import { Email } from "@mui/icons-material";
 import { AiOutlineMail } from "react-icons/ai"
 import { FaWhatsapp } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 
 
 
+
+
 import "../utils/glowStyles.css";
-import BuyMeACoffee from "../components/BuyMeACoffee";
+
 import ProjectsCarousel from "../components/ProjectsCarousel";
 import Services from "../components/Services";
+import PersonalProjects from "../components/PersonalProjects";
 
 
 export default function Home() {
+
+
+
+
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -59,7 +58,7 @@ export default function Home() {
                   Welcome to my portfolio! I'm Francisco, 18 years old Front End Developer from Venezuela. I'm currently
                   studying Systems Engineering at the university. My main job is creating web applications
                   for the web, whether you need to grow your business, personal brand or want to create your dream
-                  project. Here you'll be able to see my projects and reach me,  I'll be glad to help.  
+                  project. Here you'll be able to see my projects and reach me,  I'll be glad to help.
                 </p>
               </article>
 
@@ -69,11 +68,13 @@ export default function Home() {
                   route={"/contact"}
                   styleClass={"primary-button"}
                 />
-                <NavigationButton
-                  text={"My projects"}
-                  route={"/projects"}
-                  styleClass={"secondary-button"}
-                />
+                <div className="w-full">
+                  <a href="/public/Francisco Luna 2023 Resume EN.pdf" download="">
+                    <button className={"secondary-button"}>My CV in English</button>
+                  </a>
+                </div>
+
+
               </div>
               <motion.div
                 animate={{
@@ -88,24 +89,25 @@ export default function Home() {
 
           </div>
 
-      <div className="flex flex-col justify-center items-center">
-          <h3
-                  className="font-bold lex text-left max-639:justify-center max-639:text-4xl main
-           text-mainDarkCyan dark:text-white lg:text-3xl"
-                >
-                  See some of my
-                </h3>
-                <h4 className="text-mainDarkBlue dark:text-mainCyan font-bold text-lg text-left 
-      flex py-2 max-639:justify-center lg:text-2xl">
-                  Projects
-                </h4>
-                <p className="dark:text-mainSilver/50 mb-6">As a Front End Developer</p>
-                <NavigationButton text={"My projects"} route={"./projects"} styleClass={"primary-button mb-8"}/>
-                </div>
+          <div className="flex flex-col justify-center items-center py-12">
+    <h3
+            className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
+     text-mainDarkCyan dark:text-white lg:text-5xl"
+          >
+            Projects
+          </h3>
+          <h4 className="text-mainDarkBlue text-2xl dark:text-mainCyan font-bold text-left 
+flex py-2 max-639:justify-center lg:text-3xl">
+            That I've created
+          </h4>
+          <p className="dark:text-mainSilver/80 md:text-xl">See what I'm able to do</p>
+          <NavigationButton text={"My Projects"} route={"/projects"} styleClass={"primary-button my-4"}/>
+          </div>
 
-          <ProjectsCarousel/>
-<Services/>
-          
+          <ProjectsCarousel />
+          <Services />
+          <PersonalProjects />
+
         </article>
 
 
@@ -125,40 +127,40 @@ export default function Home() {
           >
             Where I'm
 
-            
+
 
           </h2>
-          
+
 
           <p className="text-center text-mainSilver/50 py-2"></p>
           <div className="flex gap-4 py-4 w-full flex-col">
-            
+
             <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
             border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
-                <div className="flex flex-col items-center">
-                <AiOutlineMail className="text-xl mb-2 dark:text-white"/>
+              <div className="flex flex-col items-center">
+                <AiOutlineMail className="text-xl mb-2 dark:text-white" />
                 <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Email</h5>
                 <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">franciscoluna2004@gmail.com</p>
                 <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
-                </div>
+              </div>
             </section>
             <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
             border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
-                <div className="flex flex-col items-center">
-                <FaWhatsapp className="text-xl mb-2 dark:text-white"/>
+              <div className="flex flex-col items-center">
+                <FaWhatsapp className="text-xl mb-2 dark:text-white" />
                 <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Whatsapp</h5>
                 <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">+58 4243772811</p>
                 <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
-                </div>
+              </div>
             </section>
             <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
             border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
-                <div className="flex flex-col items-center">
-                <FaDiscord className="text-xl mb-2 dark:text-white"/>
+              <div className="flex flex-col items-center">
+                <FaDiscord className="text-xl mb-2 dark:text-white" />
                 <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Discord</h5>
                 <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">xFran#3250</p>
                 <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
-                </div>
+              </div>
             </section>
 
           </div>
