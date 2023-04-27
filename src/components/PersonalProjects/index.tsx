@@ -2,7 +2,7 @@ import { createdProjects } from "./data";
 import ProjectCard, { project } from "../ProjectCard";
 import { useContext } from 'react';
 import { MainTechnologyContext } from '../../context/MainTechnologyContext';
-
+import { motion } from "framer-motion";
 
 export default function PersonalProjects() {
   const { selectedTechnology } = useContext(MainTechnologyContext);
@@ -13,7 +13,12 @@ export default function PersonalProjects() {
     : createdProjects;
 
   return (
-    <>
+    <motion.div
+    viewport={{once: false}}
+      initial={{opacity: 0, x: 50}}
+      whileInView={{opacity: 1, x:0}}
+      transition={{type: "spring", duration: 1, delay: .15}}
+      >
     <div className="flex flex-col justify-center items-center py-12">
     <h3
             className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
@@ -33,7 +38,7 @@ flex py-2 max-639:justify-center lg:text-3xl">
         <ProjectCard {...project} />
       ))}
     </div>
-    </>
+    </motion.div>
 
   );
 }
