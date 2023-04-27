@@ -1,9 +1,16 @@
-import { BsCheck2Circle as BsCheck } from "react-icons/bs"
+import { BsCheck } from "react-icons/bs"
+import { motion } from "framer-motion"
 
 
 export default function Services() {
   return (
-    <>
+    <motion.div
+    viewport={{once: false}}
+      initial={{opacity: 0, x: 50}}
+      whileInView={{opacity: 1, x:0}}
+      transition={{type: "spring", duration: 1, delay: .15}}
+      >
+    
     <div className="flex flex-col justify-center items-center py-12">
     <h3
             className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
@@ -56,19 +63,19 @@ dark:hover:bg-mainDarkCyan duration-300 bg-mainDarkCyan text-white font-semibold
               <div className="w-10">
                 <BsCheck className="dark:text-mainCyan text-mainDarkCyan text-start text-lg" />
               </div>
-              <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left font-semibold">Creation of fully responsive websites with Flexbox and CSS Grid.</p>
+              <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left dark:font-semibold">Creation of fully responsive websites with Flexbox and CSS Grid.</p>
             </li>
             <li className="flex flex-row gap-4 mb-3">
               <div className="w-10">
                 <BsCheck className="dark:text-mainCyan text-mainDarkCyan text-start text-lg" />
               </div>
-              <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left font-semibold">I use modern technologies like React, TypeScript, SASS, Tailwind and Express for creating a professional website.</p>
+              <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left dark:font-semibold">I use modern technologies like React, TypeScript, SASS, Tailwind and Express for creating a professional website.</p>
             </li>
             <li className="flex flex-row gap-4 mb-3">
               <div className="w-10">
                 <BsCheck className="dark:text-mainCyan text-mainDarkCyan text-start text-lg" />
               </div>
-              <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left font-semibold">API integrations, component creation, organized stylesheets, and various frontend functionalities like forms and authentication are implemented to ensure your website is tailored to your needs.</p>
+              <p className="dark:text-mainSilver text-mainExtraDarkBlue/90 text-left dark:font-semibold">API integrations, component creation, organized stylesheets, and various frontend functionalities like forms and authentication are implemented to ensure your website is tailored to your needs.</p>
             </li>
           </ul>
         </article>
@@ -103,7 +110,7 @@ dark:hover:bg-mainDarkCyan duration-300 bg-mainDarkCyan text-white font-semibold
           </ul>
         </article>
       </div>
-    </>
+      </motion.div>
 
   )
 }
