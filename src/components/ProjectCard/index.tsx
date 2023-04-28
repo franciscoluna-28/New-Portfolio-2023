@@ -1,3 +1,5 @@
+import NavigationButton from "../../components/Buttons/NavigationButton";
+
 // importing icons
 import { FaGithub } from "react-icons/fa";
 import { SiNetlify } from "react-icons/si";
@@ -40,20 +42,24 @@ export default function ProjectCard({ image, title, description, githubLink, dep
                     <div className="badge glow-secondary dark:bg-mainCyan dark:text-mainExtraDarkBlue/70 bg-mainDarkCyan outline-none border-transparent text-white">{mainTechnology}</div>
                 </h2>
                 <p className='my-2 leading-loose dark:text-mainSilver/50 text-mainExtraDarkBlue/50 text-left'>{description}</p>
-                <div className="card-actions justify-end">
+                <div className="card-actions justify-end flex-col w-full">
+                    <div className="flex gap-4 w-full">
                     {tags.map((tag) => (
                         <div className="badge badge-outline" key={tag}>{tag}</div>
                     ))}
+                    </div>
+                    <div className="flex w-full gap-4 py-4">
                     {isValidGithubLink && (
                         <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                            <FaGithub className='text-xl dark:text-white text-mainExtraDarkBlue/70' />
+                            <button className="primary-button px-4 w-full">Github Link</button>
                         </a>
                     )}
                     {isValidNetlifyLink && (
                         <a href={deploymentLink} target="_blank" rel="noopener noreferrer">
-                            <SiNetlify className='text-xl dark:text-mainCyan text-mainDarkCyan' />
+                            <button className='secondary-button px-4 w-full'>Live Demo</button>
                         </a>
                     )}
+                    </div>
                 </div>
             </div>
         </div>
