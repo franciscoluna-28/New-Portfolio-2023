@@ -33,10 +33,9 @@ export default function Home() {
           <div className="flex flex-col items-center lg:grid lg:grid-flow-col lg:gap-12 lg:justify-center lg:px-8 py-24">
             <figure className="py-4">
               <img
-                className="h-52 w-52 z-40 rounded-full border-white animate border-2 border-double main-image p-1 
-            floating glow-main lg:h-72 lg:w-72"
+                className="h-52 w-52 z-40 rounded-full border-white animate border-2 border-double main-image p-1 floating glow-main lg:h-72 lg:w-72"
                 src={personalImage}
-                alt="Francisco Luna"
+                alt="Francisco Luna" loading="lazy"
               ></img>
             </figure>
 
