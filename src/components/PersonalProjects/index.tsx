@@ -35,7 +35,7 @@ flex py-2 max-639:justify-center lg:text-3xl">
     <div className="flex gap-4 lg:gap-10 justify-center flex-wrap">
       
       {filteredProjects.map((project) => (
-        <ProjectCard {...project} />
+        <ProjectCard key={project.id} {...project} />
       ))}
     </div>
     </motion.div>
