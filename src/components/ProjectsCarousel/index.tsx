@@ -18,7 +18,6 @@ export default function ProjectsCarousel () {
         spaceBetween={30}
         pagination={{
             type: "progressbar",
-
           }}
         
         centeredSlides={true}
@@ -45,7 +44,7 @@ export default function ProjectsCarousel () {
     return (
 <SwiperSlide key={project.id}>
   <div className="relative bg-center">
-    <img className='w-full cover-full min-w-min h-fit rounded-md overflow-hidden pt-4 filter brightness-75 duration-300 ease-in blur-sm' src={project.image} alt={project.title} />
+    <img loading='lazy' className='w-full h-full cover-full min-w-min rounded-md overflow-hidden pt-4 filter object-cover brightness-75 duration-300 ease-in blur-sm' src={project.image} alt={project.title} />
     <div className="absolute inset-0 bg-black/70 flex items-center justify-center p-32">
       <div className="text-white text-center">
         <h3 className='font-bold text-3xl lg:text-6xl lg:mb-4'>{project.title}</h3>
