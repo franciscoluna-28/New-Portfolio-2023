@@ -1,8 +1,12 @@
 import { useNavigate } from "react-router";
 import { NavigationButtonProps as Navigation } from "../../Interfaces/NavigationButtonProps";
-import "../../directives/buttons.css"
+import "../../directives/buttons.css";
 
-export default function NavigationButton({ text, route, styleClass }: Navigation) {
+export default function NavigationButton({
+  text,
+  route,
+  styleClass,
+}: Navigation) {
   const navigate = useNavigate();
 
   const navigateToPage = (route: string) => {
@@ -10,9 +14,7 @@ export default function NavigationButton({ text, route, styleClass }: Navigation
   };
 
   return (
-    <button
-      className={styleClass}
-      onClick={() => navigateToPage(route)}>
+    <button className={styleClass} onClick={() => navigateToPage(route)}>
       {text}
     </button>
   );
