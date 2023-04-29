@@ -51,12 +51,12 @@ export default function ProjectCard({ image, title, description, githubLink, dep
                     <div className="flex w-full gap-4 py-4">
                     {isValidGithubLink && (
                         <a href={githubLink} target="_blank" rel="noopener noreferrer">
-                            <button className="primary-button px-4 w-full">Github Link</button>
+                            <button className="primary-button px-4 w-full dark:text-mainExtraDarkBlue text-white">Github Link</button>
                         </a>
                     )}
                     {isValidNetlifyLink && (
                         <a href={deploymentLink} target="_blank" rel="noopener noreferrer">
-                            <button className='secondary-button px-4 w-full'>Live Demo</button>
+                            <button className='secondary-button px-4 w-full dark:text-white text-mainDarkCyan'>Live Demo</button>
                         </a>
                     )}
                     </div>
