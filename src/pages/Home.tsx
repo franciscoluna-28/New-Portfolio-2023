@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { AiOutlineMail } from "react-icons/ai"
 import { FaWhatsapp } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
+import { BsFillBriefcaseFill } from "react-icons/bs"
+import Footer from "../components/Footer";
 
 
 
@@ -15,6 +17,9 @@ import "../utils/glowStyles.css";
 import ProjectsCarousel from "../components/ProjectsCarousel";
 import Services from "../components/Services";
 import PersonalProjects from "../components/PersonalProjects";
+import Experience from "../components/Experience";
+import ContactForm from "../components/ContactForm";
+import Projects from "./Projects";
 
 
 export default function Home() {
@@ -48,28 +53,31 @@ export default function Home() {
 
 
               <motion.div>
-              <article className="py-4">
-                <h1
-                  className="font-bold text-4xl flex text-left py-2 max-639:justify-center max-639:text-4xl main
+                <article className="py-4">
+                  <Footer />
+                  <h1
+                    className="font-bold text-4xl flex text-left py-2 max-639:justify-center max-639:text-4xl main
            text-mainDarkCyan dark:text-white lg:text-5xl"
-                >
-                  Hi! I'm Francisco Luna
-                </h1>
-                <h2 className="text-mainDarkBlue dark:text-mainCyan font-bold text-3xl text-left 
+                  >
+                    Hi! I'm Francisco Luna
+                  </h1>
+                  <h2 className="text-mainDarkBlue dark:text-mainCyan font-bold text-3xl text-left 
       flex py-2 max-639:justify-center lg:text-4xl">
-                  Front End Developer
-                </h2>
-                <p
-                  className="text-silver leading-loose py-2 text-left w-auto max-639:w-72 max-639:m-auto max-639:text-center text-xl dark:text-mainSilver
+                    Front End Developer
+                  </h2>
+                  <p
+                    className="text-silver leading-loose py-2 text-left w-auto max-639:w-72 max-639:m-auto max-639:text-center text-xl dark:text-mainSilver
             text-mainDarkBlue/70"
-                >
-                  Welcome to my portfolio! I'm Francisco, 18 years old Front End Developer from Venezuela. I'm currently
-                  studying Systems Engineering at the university. My main job is creating web applications
-                  for the web, whether you need to grow your business, personal brand or want to create your dream
-                  project. Here you'll be able to see my projects and reach me,  I'll be glad to help.
-                </p>
-              </article>
+                  >
+                    Welcome to my portfolio! I'm Francisco, 18 years old Front End Developer from Venezuela. I'm currently
+                    studying Systems Engineering at the university. My main job is creating web applications
+                    for the web, whether you need to grow your business, personal brand or want to create your dream
+                    project. Here you'll be able to see my projects and reach me,  I'll be glad to help.
+                  </p>
+                </article>
               </motion.div>
+
+
 
               <div className="w-full flex gap-4 flex-col md:flex-row">
                 <NavigationButton
@@ -85,6 +93,7 @@ export default function Home() {
 
 
               </div>
+
               <motion.div
                 animate={{
                   opacity: [0, 1, 0],
@@ -94,36 +103,32 @@ export default function Home() {
                 <SkillsIcons />
               </motion.div>
 
+
+
             </div>
 
           </div>
 
           <motion.div
-    viewport={{once: false}}
-      initial={{opacity: 0, x: 50}}
-      whileInView={{opacity: 1, x:0}}
-      transition={{type: "spring", duration: 1, delay: .15}}
-      >
-          <div className="flex flex-col justify-center items-center py-12">
-    <h3
-            className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
-     text-mainDarkCyan dark:text-white lg:text-5xl"
+            viewport={{ once: false }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", duration: 1, delay: .15 }}
           >
-            Projects
-          </h3>
-          <h4 className="text-mainDarkBlue text-2xl dark:text-mainCyan font-bold text-left 
-flex py-2 max-639:justify-center lg:text-3xl">
-            That I've created
-          </h4>
-          <p className="dark:text-mainSilver/80 md:text-xl">See what I'm able to do</p>
-          <NavigationButton text={"My Projects"} route={"/projects"} styleClass={"primary-button my-4 w-1/4"}/>
-          </div>
 
-          <ProjectsCarousel />
+            <Experience />
+
+
+
+
+
+
+
+            <ProjectsCarousel />
           </motion.div>
 
           <Services />
-          <PersonalProjects />
+<Projects/>
 
         </article>
 
@@ -140,68 +145,72 @@ flex py-2 max-639:justify-center lg:text-3xl">
         <div className="py-20 w-full">
 
           <motion.div
-    viewport={{once: false}}
-      initial={{opacity: 0, x: 50}}
-      whileInView={{opacity: 1, x:0}}
-      transition={{type: "spring", duration: 1, delay: .15}}
-      >
-
-<div className="flex flex-col justify-center items-center py-12">
-    <h3
-            className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
-     text-mainDarkCyan dark:text-white lg:text-5xl"
+            viewport={{ once: false }}
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ type: "spring", duration: 1, delay: .15 }}
           >
-            Contact Me
-          </h3>
-          <h4 className="text-mainDarkBlue text-2xl dark:text-mainCyan font-bold text-left 
+
+            <div className="flex flex-col justify-center items-center py-12">
+              <h3
+                className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
+     text-mainDarkCyan dark:text-white lg:text-5xl"
+              >
+                Contact Me
+              </h3>
+              <h4 className="text-mainDarkBlue text-2xl dark:text-mainCyan font-bold text-left 
 flex py-2 max-639:justify-center lg:text-3xl">
-            In my Social Media
-          </h4>
-          <p className="dark:text-mainSilver/80 md:text-xl">Let's connect and create something together!</p>
-          </div>
-          <p className="text-center text-mainSilver/50 py-2"></p>
-          <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
+                In my Social Media
+              </h4>
+              <p className="dark:text-mainSilver/80 md:text-xl">Let's connect and create something together!</p>
+            </div>
+            <p className="text-center text-mainSilver/50 py-2"></p>
+            <div className="grid gap-4 grid-cols-1 md:grid-cols-2">
 
-            <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-auto dark:hover:bg-transparent
+              <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-auto dark:hover:bg-transparent
             border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
-              <div className="flex flex-col items-center">
-                <AiOutlineMail className="text-xl mb-2 dark:text-white" />
-                <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Email</h5>
-                <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">franciscoluna2004@gmail.com</p>
-                <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
-              </div>
-            </section>
-            <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
+                <div className="flex flex-col items-center">
+                  <AiOutlineMail className="text-xl mb-2 dark:text-white" />
+                  <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Email</h5>
+                  <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">franciscoluna2004@gmail.com</p>
+                  <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
+                </div>
+              </section>
+              <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
             border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
-              <div className="flex flex-col items-center">
-                <FaWhatsapp className="text-xl mb-2 dark:text-white" />
-                <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Whatsapp</h5>
-                <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">+58 4243772811</p>
-                <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
-              </div>
-            </section>
-            <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
-            border-2 border-transparent md:col-span-2 dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
-              <div className="flex flex-col items-center">
-                <FaDiscord className="text-xl mb-2 dark:text-white" />
-                <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Discord</h5>
-                <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">xFran#3250</p>
-                <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
-              </div>
-            </section>
+                <div className="flex flex-col items-center">
+                  <FaWhatsapp className="text-xl mb-2 dark:text-white" />
+                  <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Whatsapp</h5>
+                  <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">+58 4243772811</p>
+                  <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
+                </div>
+              </section>
+              <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
+            border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
+                <div className="flex flex-col items-center">
+                  <FaDiscord className="text-xl mb-2 dark:text-white" />
+                  <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Discord</h5>
+                  <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">xFran#3250</p>
+                  <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
+                </div>
+              </section>
+              <section className="h-fit dark:bg-mainDarkBlue/40 rounded-xl p-8 w-full dark:hover:bg-transparent
+            border-2 border-transparent dark:hover:border-mainCyan duration-300 bg-white hover:border-mainDarkCyan shadow-lg">
+                <div className="flex flex-col items-center">
+                  <BsFillBriefcaseFill className="text-xl mb-2 dark:text-white" />
+                  <h5 className="dark:text-white font-semibold text-mainExtraDarkBlue/90">Fiverr</h5>
+                  <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">@itsxfran</p>
+                  <a href="#"><span className="block dark:text-mainCyan text-mainDarkCyan">Send a message</span></a>
+                </div>
+              </section>
 
-          </div>
+            </div>
 
-          <div className="py-4">
-          <NavigationButton
-            text={"Or send me an email"}
-            route={"/contact"}
-            styleClass={"primary-button w-full"}
-          />
-          </div>
-                  </motion.div>
+
+          </motion.div>
         </div>
 
+        <ContactForm />
       </section>
 
     </motion.div>
