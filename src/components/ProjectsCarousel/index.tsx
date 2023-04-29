@@ -3,6 +3,7 @@ import { Autoplay, Navigation, Pagination, EffectCards } from 'swiper';
 import { createdProjects } from '../PersonalProjects/data';
 import 'swiper/swiper-bundle.css';
 import "../../utils/glowStyles.css";
+import NavigationButton from '../Buttons/NavigationButton';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -10,6 +11,22 @@ import 'swiper/css/effect-fade';
 
 export default function ProjectsCarousel () { 
     return(
+      <>
+      <div className="flex flex-col justify-center items-center py-12">
+      <h3
+              className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
+       text-mainDarkCyan dark:text-white lg:text-5xl"
+            >
+              Projects
+            </h3>
+            <h4 className="text-mainDarkBlue text-2xl dark:text-mainCyan font-bold text-left 
+  flex py-2 max-639:justify-center lg:text-3xl">
+              That I've created
+            </h4>
+            <p className="dark:text-mainSilver/80 md:text-xl">See what I'm able to do</p>
+            <NavigationButton text={"My Projects"} route={"/projects"} styleClass={"primary-button my-4 w-1/4"}/>
+            </div>
+  
         <div className="shadow-md max-w-fit max-h-fit">
 
 <Swiper
@@ -60,6 +77,7 @@ export default function ProjectsCarousel () {
   })}
 </Swiper>
 </div>
+</>
     )
 } 
     
