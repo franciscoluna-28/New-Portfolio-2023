@@ -1,15 +1,13 @@
-import { NavLink } from 'react-router-dom';
-import { FaBars } from 'react-icons/fa';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
-import "../../styles/navbar.css"
-import { Toggle } from '../Switches/DarkModeSwitch';
-import "../../utils/glowStyles.css"
-
+import { NavLink } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import "../../styles/navbar.css";
+import { Toggle } from "../Switches/DarkModeSwitch";
+import "../../utils/glowStyles.css";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -19,14 +17,7 @@ export default function Navbar() {
     <>
       <header className="p-8 lg:p-6 sticky top-0 z-50 dark:bg-mainExtraDarkBlue/90 bg-white/90 shadow-lg">
         <nav className="flex lg:justify-center">
-
-
-
-          <FaBars
-            className="bars"
-            onClick={toggleMenu}
-          />
-
+          <FaBars className="bars" onClick={toggleMenu} />
 
           <AnimatePresence>
             {isMenuOpen && (
@@ -83,23 +74,24 @@ export default function Navbar() {
                     Contact
                   </NavLink>
 
-                  <div className='w-full' onClick={toggleMenu}>
-                    <a href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU" download="">
-                      <button className='hamburguer-bar-link w-full text-left'>
+                  <div className="w-full" onClick={toggleMenu}>
+                    <a
+                      href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU"
+                      download=""
+                    >
+                      <button className="hamburguer-bar-link w-full text-left">
                         My CV in Spanish
                       </button>
                     </a>
                   </div>
-                  <div className='p-4'>
+                  <div className="p-4">
                     <Toggle />
                   </div>
-
                 </motion.section>
               </>
             )}
           </AnimatePresence>
           <section className="hidden lg:flex gap-20 font-medium items-center">
-
             <NavLink className="nav-link" to="/">
               Home
             </NavLink>
@@ -117,14 +109,15 @@ export default function Navbar() {
             </NavLink>
             <Toggle />
             <div className="w-full">
-              <a href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU" download="">
+              <a
+                href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU"
+                download=""
+              >
                 <button className={"primary-button"}>My CV in Spanish</button>
               </a>
             </div>
           </section>
-
         </nav>
-
       </header>
     </>
   );
