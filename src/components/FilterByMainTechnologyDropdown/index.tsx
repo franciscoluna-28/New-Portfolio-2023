@@ -1,10 +1,9 @@
 // FilterByMainTechnologyDropdown.tsx
-import { useContext } from 'react';
-import { MainTechnologyContext } from '../../context/MainTechnologyContext';
-import { useState } from 'react'
-import "./styles.css"
+import { useContext } from "react";
+import { MainTechnologyContext } from "../../context/MainTechnologyContext";
+import { useState } from "react";
+import "./styles.css";
 import "../../utils/glowStyles.css";
-
 
 export function FilterByMainTechnology() {
   const [isOpen, setIsOpen] = useState(false);
