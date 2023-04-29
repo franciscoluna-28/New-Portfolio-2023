@@ -25,6 +25,10 @@ flex py-2 max-639:justify-center lg:text-3xl">
           <p className="dark:text-mainSilver/80 md:text-xl">As a developer</p>
           </div>
 
+
+
+          
+
       <div className="grid grid-flow-row gap-8 lg:grid-cols-3">
         <article className="service dark:bg-mainDarkBlue/50 rounded-b-lg w-full
 h-fit dark:hover:bg-mainDarkBlue/40
