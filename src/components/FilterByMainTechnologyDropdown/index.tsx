@@ -16,12 +16,12 @@ export function FilterByMainTechnology() {
   }
 
   return (
-    <div className="relative inline-block text-left z-40 mb-8">
+    <div className="relative inline-block text-left z-40">
       <div>
         <button
           type="button"
-          className="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-mainExtraDarkBlue dark:bg-mainDarkBlue dark:text-mainSilver
-           rounded-md shadow-md dark:hover:bg-mainDarkBlue/50 focus:outline-none focus:ring-2 ring-mainExtraDarkBlue/50"
+          className="inline-flex justify-center w-full px-4 text-sm text-mainExtraDarkBlue dark:bg-mainDarkBlue/50 dark:text-white font-semibold
+           rounded-md shadow-md dark:hover:bg-mainDarkBlue/20 focus:outline-none h-16 items-center focus:ring-2 ring-mainExtraDarkBlue/50"
           id="filter-menu"
           aria-haspopup="true"
           aria-expanded="true"
