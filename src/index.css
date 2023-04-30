@@ -30,6 +30,9 @@ body {
   background-color: white;
 }
 
+body * {
+    @apply transition-colors duration-200;
+}
 
 .dark body {
   background-color: #0B0C10;
