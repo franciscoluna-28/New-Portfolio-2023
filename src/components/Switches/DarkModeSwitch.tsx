@@ -31,7 +31,7 @@ export const Toggle = () => {
 
     return (
         <button onClick={toggleTheme} className="peer">
-            {isDark() ? <FaMoon/> : <BsSunFill/>}
+            {isDark() ? <FaMoon className="dark:text-mainSilver dark:hover:text-white text-mainExtraDarkBlue/70"/> : <BsSunFill className="dark:text-mainSilver dark:hover:text-white text-mainExtraDarkBlue/70"/>}
         </button>
     )
 }
