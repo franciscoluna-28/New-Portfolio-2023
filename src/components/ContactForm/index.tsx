@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import NavigationButton from "../../components/Buttons/NavigationButton";
 
 type ContactFormProps = {
   serviceId: string;
@@ -66,12 +67,12 @@ export default function ContactForm({
     <div className="flex flex-col justify-center items-center py-12">
     <h3
       className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
-text-mainDarkCyan dark:text-white lg:text-5xl"
+text-mainExtraDarkBlue dark:text-white lg:text-5xl"
     >
       Reach me
     </h3>
     <h4
-      className="text-mainDarkBlue text-2xl dark:text-mainCyan font-bold text-left 
+      className="text-mainDarkCyan text-2xl dark:text-mainCyan font-bold text-left 
 flex py-2 max-639:justify-center lg:text-3xl"
     >
      By Email
@@ -90,7 +91,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full border-2 dark:border-mainCyan bg-transparent p-4 rounded-md"
+              className="w-full border-2 border-mainDarkCyan dark:border-mainCyan bg-transparent p-4 rounded-md"
               placeholder="Your Full Name"
               required
             />
@@ -102,7 +103,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full border-2 dark:border-mainCyan bg-transparent p-4 rounded-md"
+              className="w-full border-2 dark:border-mainCyan border-mainDarkCyan bg-transparent p-4 rounded-md"
               placeholder="Your Email"
               required
             />
@@ -114,7 +115,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
               value={formData.message}
               onChange={handleChange}
               rows={4}
-              className="w-full border-2 dark:border-mainCyan bg-transparent p-4 rounded-md"
+              className="w-full border-2 dark:border-mainCyan border-mainDarkCyan bg-transparent p-4 rounded-md"
               placeholder="Your Message"
               required
             ></textarea>
@@ -123,7 +124,8 @@ flex py-2 max-639:justify-center lg:text-3xl"
           <div>
             <button
               type="submit"
-              className="flex justify-center primary-button p-4 w-1/2 lg:w-1/4"
+              className="bg-mainDarkCyan flex justify-items-start justify-center items-center duration-150 ease-in h-16 font-normal hover:text-mainExtraDarkBlue w-full hover:border-transparent rounded border-none text-white dark:bg-mainCyan dark:text-mainExtraDarkBlue dark:hover:text-mainDarkCyan shadow-lg shadow-mainCyan/10
+            } primary-button p-4 w-1/2 lg:w-1/4"
               disabled={isSending}
             >
               {isSending ? 'Sending...' : 'Send'}

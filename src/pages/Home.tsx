@@ -46,7 +46,7 @@ type RefType = HTMLDivElement | null;
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
-      <section className="p-8 lg:p-16 flex items-center flex-col justify-center min-h-screen">
+      <section className="p-8 lg:p-16 flex items-center flex-col justify-center min-h-screen overflow-x-hidden">
         <article className="flex items-center flex-col text-center">
           <div className="flex flex-col items-center lg:grid lg:grid-flow-col lg:gap-12 lg:justify-center lg:px-8 py-24">
             <figure className="py-4">
@@ -62,17 +62,17 @@ type RefType = HTMLDivElement | null;
               <motion.div>
                 <article className="py-4">
                   <div className="flex items-center">
-                  <button onClick={handleClick} className="dark:text-white font-bold flex items-center gap-4"><BsChevronDoubleDown/>Go to contact</button>
+                  <button onClick={handleClick} className="dark:text-white text-mainExtraDarkBlue font-bold flex items-center gap-4">Go to contact</button>
                   <Footer />
                   </div>
                   <h1
                     className="font-bold text-4xl flex text-left py-2 max-639:justify-center max-639:text-4xl main
-           text-mainDarkCyan dark:text-white lg:text-5xl"
+           text-mainExtraDarkBlue dark:text-white lg:text-5xl"
                   >
                     Hello! I'm Francisco Luna
                   </h1>
                   <h2
-                    className="text-mainDarkBlue dark:text-mainCyan font-bold text-3xl text-left 
+                    className="text-mainDarkCyan dark:text-mainCyan font-bold text-3xl text-left 
       flex py-2 max-639:justify-center lg:text-4xl"
                   >
                     Front End Developer

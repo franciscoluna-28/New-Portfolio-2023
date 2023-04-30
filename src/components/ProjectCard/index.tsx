@@ -39,7 +39,7 @@ export default function ProjectCard({
   const isValidNetlifyLink = netlifyLinkRegex.test(deploymentLink);
 
   return (
-    <div className="card w-auto min-h-full max-w-xl shadow-xl dark:bg-gradient-to-r dark:hover:border-mainCyan border-4 dark:hover:shadow-mainCyan/10 dark:border-mainDarkBlue/10 border-transparent dark:from-mainDarkBlue/50 dark:to-mainDarkBlue/30 lg:hover:scale-105 duration-300">
+    <div className="card w-auto min-h-full max-w-xl shadow-xl dark:bg-gradient-to-r dark:hover:border-mainCyan border-4 dark:hover:shadow-mainCyan/10 dark:border-mainDarkBlue/10 border-transparent dark:from-mainDarkBlue/50 dark:to-mainDarkBlue/30 ease-in">
       <figure>
         <img className="" src={image} alt="Project" />
       </figure>

@@ -12,15 +12,15 @@ export default function Projects() {
     <div className="flex flex-col justify-center items-center pb-4 pt-12" id='projects'>
     <h3
             className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
-     text-mainDarkCyan dark:text-white lg:text-5xl"
+     text-mainExtraDarkBlue dark:text-white lg:text-5xl"
           >
             Finished
           </h3>
-          <h4 className="text-mainDarkBlue text-2xl dark:text-mainCyan font-bold text-left 
+          <h4 className="text-mainDarkCyan text-2xl dark:text-mainCyan font-bold text-left 
 flex py-2 max-639:justify-center lg:text-3xl">
             Projects
           </h4>
-          <p className="dark:text-mainSilver/80 md:text-xl text-center">Showcase of my personal finished projects. I explain the
+          <p className="dark:text-mainSilver/80 md:text-xl text-center max-w-screen-sm leading-loose">Showcase of my personal finished projects. I explain the
           problem I wanted to solve and the technologies and concepts I applied</p>
           </div>
     <FilterByMainTechnology/>

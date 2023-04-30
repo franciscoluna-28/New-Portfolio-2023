@@ -3,5 +3,5 @@
 }
 
 .secondary-button {
-    @apply border-2 border-mainDarkCyan flex justify-items-start justify-center items-center h-16 font-normal rounded w-full hover:text-mainDarkCyan duration-150 dark:border-mainCyan dark:text-white dark:hover:text-mainExtraDarkBlue dark:hover:bg-mainCyan shadow-lg shadow-mainCyan/10
+    @apply border-2 border-mainDarkCyan text-mainExtraDarkBlue/70 flex justify-items-start justify-center items-center h-16 font-normal rounded w-full hover:text-mainDarkCyan duration-150 dark:border-mainCyan dark:text-white dark:hover:text-mainExtraDarkBlue dark:hover:bg-mainCyan shadow-lg shadow-mainCyan/10
 }
