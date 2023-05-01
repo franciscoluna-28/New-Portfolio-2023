@@ -1,53 +1,95 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faLinkedin,
-  faTwitter,
-  faWhatsapp,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
-import { SiLinktree } from "react-icons/si";
-import FooterCard from "./FooterCard";
-import "../../directives/cards.css";
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { SiBuymeacoffee } from "react-icons/si";
+import { RefObject } from "react";
 
-const socialMedia = [
-  /*   {
-    id: 1,
-    link: "https://www.linkedin.com/in/franciscoluna28",
-    icon: faLinkedin
-  },
-  {
-    id: 2,
-    link: "https://twitter.com/FranLunDev",
-    icon: faTwitter
-  }, */
-  {
-    id: 3,
-    link: "https://www.linkedin.com/in/franciscoluna28",
-    icon: faLinkedin,
-  },
-  {
-    id: 4,
-    link: "https://github.com/franciscoluna-28",
-    icon: faGithub,
-  },
-];
 
-const Footer = () => {
+type FooterProps = {
+  homeRef: RefObject<HTMLDivElement>;
+}
+
+export default function Footer({homeRef}: FooterProps) {
+
+  // No hay DRY aqui
+   const handleScroll = () => {
+    homeRef.current?.scrollIntoView({
+      behavior: "smooth"
+    });
+  };
+  
   return (
-    <footer className="flex justify-start gap-4 m-4 text-xl items-center">
-      {socialMedia.map((socialMediaCard) => (
-        <FooterCard
-          key={socialMediaCard.id}
-          icon={<FontAwesomeIcon icon={socialMediaCard.icon} />}
-          socialLink={socialMediaCard.link}
-          styleClass="dark:text-white text-mainExtraDarkBlue"
-        />
-      ))}
-      <a href="https://linktr.ee/franciscolunadev">
-        <SiLinktree className="dark:text-white text-mainExtraDarkBlue" />
-      </a>
+    <footer className="flex flex-col w-full h-auto shadow-xl bg-mainDarkCyan px-8 py-8 dark:bg-mainDarkBlue/50">
+
+<h5 className="text-white font-semibold text-2xl m-auto mb-4 hover:text-mainCyan duration-500 cursor-pointer">Francisco Luna</h5>
+
+
+      <ul className="flex flex-col m-auto md:flex-row gap-6 text-center dark:text-mainSilver text-base flex-wrap justify-center mb-6">
+        <li>
+          <button className="dark:text-mainSilver dark:hover:text-white
+          dark:hover:underline underline-offset-2 decoration-mainCyan" onClick={handleScroll}>Home</button>
+        </li>
+        <li>
+          <button>About</button>
+        </li>
+        <li>
+          <button>Experience</button>
+        </li>
+        <li>
+          <button>Services</button>
+        </li>
+        <li>
+          <button>Portfolio</button>
+        </li>
+        <li>
+          <button>UI / UX Design</button>
+        </li>
+        <li>
+          <button>Contact</button>
+        </li>
+      </ul>
+
+      <ul className="flex gap-4 items-center justify-center m-auto mb-4">
+        <a href="https://twitter.com/FranLunDev">
+          <li className="">
+            <div
+              className="dark:bg-mainDarkBlue cursor-pointer
+                    dark:hover:border-mainCyan dark:hover:bg-transparent bg-mainExtraDarkBlue flex justify-center 
+                    items-center border-transparent shadow-lg rounded-xl 
+                    w-12 h-12 border-2
+                    duration-300 dark:hover:!text-mainCyan hover:bg-transparent hover:border-white"
+            >
+              <FaTwitter className="dark:text-white text-lg dark:hover:text-mainCyan" />
+            </div>
+          </li>
+        </a>
+        <a href="https://www.instagram.com/franciscolunaofficial/">
+          <li className="">
+            <div
+              className="dark:bg-mainDarkBlue cursor-pointer
+                    dark:hover:border-mainCyan dark:hover:bg-transparent bg-mainExtraDarkBlue flex justify-center 
+                    items-center border-transparent shadow-lg rounded-xl 
+                    w-12 h-12 border-2
+                    duration-300 dark:hover:!text-mainCyan hover:bg-transparent hover:border-white"
+            >
+              <FaInstagram className="dark:text-white text-lg dark:hover:text-mainCyan" />
+            </div>
+          </li>
+        </a>
+        <a href="https://www.buymeacoffee.com/FranLunDev">
+          <li className="">
+            <div
+              className="dark:bg-mainDarkBlue cursor-pointer
+                    dark:hover:border-mainCyan dark:hover:bg-transparent bg-mainExtraDarkBlue flex justify-center 
+                    items-center border-transparent shadow-lg rounded-xl 
+                    w-12 h-12 border-2
+                    duration-300 dark:hover:!text-mainCyan hover:bg-transparent hover:border-white"
+            >
+              <SiBuymeacoffee className="dark:text-white text-lg dark:hover:text-mainCyan" />
+            </div>
+          </li>
+        </a>
+      </ul>
+      <span className="m-auto text-sm mt-4 text-center">© Francisco Luna All rights reserved 2023</span>
     </footer>
   );
-};
-
-export default Footer;
+}
