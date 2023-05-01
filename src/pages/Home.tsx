@@ -6,7 +6,7 @@ import { AiOutlineMail } from "react-icons/ai";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaDiscord } from "react-icons/fa";
 import { BsFillBriefcaseFill } from "react-icons/bs";
-import Footer from "../components/Footer";
+import Footer from "../components/MediaLinks";
 import { BsChevronDoubleDown } from "react-icons/bs";
 import { useRef } from "react"
 
@@ -17,6 +17,8 @@ import Services from "../components/Services";
 import Experience from "../components/Experience";
 import Projects from "./Projects";
 import Contact from "../components/Contact";
+import MainSocialMedia from "../components/MediaLinks";
+import UIUXDesign from "../components/UI-UX-Design";
 
 
 
@@ -27,7 +29,7 @@ export default function Home() {
 
 type RefType = HTMLDivElement | null;
 
-  // Crea la referencia y especifica el tipo
+
   const contactRef = useRef<RefType>(null);
   const projectsRef = useRef<RefType>(null);
 
@@ -39,6 +41,8 @@ type RefType = HTMLDivElement | null;
   const handleClick2 = () => {
     projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
+
+
 
   return (
     <motion.div
@@ -63,7 +67,7 @@ type RefType = HTMLDivElement | null;
                 <article className="py-4">
                   <div className="flex items-center">
                   <button onClick={handleClick} className="dark:text-white text-mainExtraDarkBlue font-bold flex items-center gap-4">Go to contact</button>
-                  <Footer />
+                  <MainSocialMedia />
                   </div>
                   <h1
                     className="font-bold text-4xl flex text-left py-2 max-639:justify-center max-639:text-4xl main
@@ -131,6 +135,7 @@ type RefType = HTMLDivElement | null;
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", duration: 1, delay: 0.15 }}
           >
+                      <UIUXDesign/>
             <Experience />
             <button onClick={handleClick2}
           className={"primary-button mt-12 w-full"}
@@ -141,6 +146,7 @@ type RefType = HTMLDivElement | null;
           <Services />
           <div ref={projectsRef}>
           <Projects />
+
           </div>
 
         </article>
