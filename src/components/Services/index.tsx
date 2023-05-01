@@ -22,7 +22,7 @@ export default function Services() {
 flex py-2 max-639:justify-center lg:text-3xl">
             I offer
           </h4>
-          <p className="dark:text-mainSilver/80 md:text-xl">As a developer</p>
+          <p className="dark:text-mainSilver/80 md:text-xl">As a Front - End developer</p>
           </div>
 
 
