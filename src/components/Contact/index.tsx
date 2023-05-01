@@ -9,6 +9,7 @@ export default function Contact() {
     const mailerServiceID = import.meta.env.VITE_SERVICE_ID;
     const mailerTemplateID = import.meta.env.VITE_TEMPLATE_ID;
     const mailerUserID = import.meta.env.VITE_USER_ID;
+
     return(
         <div className="py-20 w-full">
           <motion.div
@@ -49,7 +50,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
                   <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">
                     franciscoluna2004@gmail.com
                   </p>
-                  <a href="#">
+                  <a href="mailto:franciscoluna2004@gmail.com">
                     <span className="block dark:text-mainCyan text-mainDarkCyan">
                       Send a message
                     </span>
