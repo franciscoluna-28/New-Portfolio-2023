@@ -1,7 +1,9 @@
-import {Route, 
-  createBrowserRouter, 
+import {
+  Route,
+  createBrowserRouter,
   createRoutesFromElements,
-  RouterProvider } from "react-router-dom";
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 
 // Pages
@@ -21,15 +23,13 @@ const router = createBrowserRouter(
       <Route path="*" element={<NotFound />} />
     </Route>
   )
-)
+);
 
 function App() {
   return (
-
     <ThemeProvider>
-    <RouterProvider router={router} />
+      <RouterProvider router={router} />
     </ThemeProvider>
-
   );
 }
 
