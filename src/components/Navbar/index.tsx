@@ -5,6 +5,12 @@ import { useState } from "react";
 import "../../styles/navbar.css";
 import { Toggle } from "../Switches/DarkModeSwitch";
 import "../../utils/glowStyles.css";
+import { RefObject } from "react";
+
+// No hay DRY 
+type NavbarProps = {
+  homeRef: RefObject<HTMLDivElement>;
+}
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
