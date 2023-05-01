@@ -17,10 +17,10 @@ export default function Projects() {
             Finished
           </h3>
           <h4 className="text-mainDarkCyan text-2xl dark:text-mainCyan font-bold text-left 
-flex py-2 max-639:justify-center lg:text-3xl">
+flex py-2 max-639:justify-center lg:text-3xl mb-2">
             Projects
           </h4>
-          <p className="dark:text-mainSilver/80 md:text-xl text-center max-w-screen-sm leading-loose">Showcase of my personal finished projects. I explain the
+          <p className="dark:text-mainSilver/80 md:text-xl text-center leading-loose">Showcase of my personal finished projects. I explain the
           problem I wanted to solve and the technologies and concepts I applied</p>
           </div>
     <FilterByMainTechnology/>
