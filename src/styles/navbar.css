@@ -7,13 +7,13 @@
 }
 
 .hamburguer-bar {
-    @apply lg:hidden absolute top-16 left-0 right-0 m-8 z-50 dark:bg-mainExtraDarkBlue bg-white rounded-md shadow-md
+    @apply lg:hidden absolute top-16 text-center flex flex-col items-center left-0 right-0 m-8 z-50 dark:bg-mainExtraDarkBlue bg-white rounded-md shadow-md
 }
 
 .hamburguer-bar-link {
-    @apply block p-4 md:p-8 dark:text-mainSilver hover:bg-mainDarkCyan hover:text-white
+    @apply block p-4 md:text-center dark:text-mainSilver text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan hover:text-white
 }
 
 .nav-link{
-    @apply dark:text-mainSilver  dark:hover:text-white text-mainExtraDarkBlue/70 border-l-4 p-2 duration-200 border-transparent dark:hover:border-l-mainCyan hover:border-l-mainDarkCyan hover:text-mainDarkCyan
+    @apply dark:text-mainSilver dark:hover:text-white text-mainExtraDarkBlue/70 border-l-4 p-2 duration-200 border-transparent dark:hover:border-l-mainCyan hover:border-l-mainDarkCyan hover:text-mainDarkCyan
 }
