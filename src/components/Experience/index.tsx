@@ -1,7 +1,11 @@
 import { AiOutlineCheckCircle as AiOutlineCheck } from "react-icons/ai";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { RefContext } from "../../context/ScrollContext";
+
 
 export default function Experience() {
+  const { experienceRef } = useContext(RefContext);
   return (
     <motion.div
       viewport={{ once: false }}
@@ -9,7 +13,7 @@ export default function Experience() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ type: "spring", duration: 1, delay: 0.15 }}
     >
-      <div className="flex flex-col justify-center items-center py-12">
+      <div className="flex flex-col justify-center items-center py-12" ref={experienceRef}>
         <h3
           className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
          text-mainExtraDarkBlue dark:text-white lg:text-5xl"

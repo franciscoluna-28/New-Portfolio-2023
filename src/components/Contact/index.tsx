@@ -4,14 +4,18 @@ import { FaWhatsapp } from "react-icons/fa"
 import { FaDiscord } from "react-icons/fa"
 import { BsFillBriefcaseFill } from "react-icons/bs"
 import ContactForm from "../ContactForm"
+import { useContext } from "react";
+import { RefContext } from "../../context/ScrollContext";
+
 
 export default function Contact() {
+  const { contactRef } = useContext(RefContext);
     const mailerServiceID = import.meta.env.VITE_SERVICE_ID;
     const mailerTemplateID = import.meta.env.VITE_TEMPLATE_ID;
     const mailerUserID = import.meta.env.VITE_USER_ID;
 
     return(
-        <div className="py-20 w-full">
+        <div className="py-20 w-full" ref={contactRef}>
           <motion.div
             viewport={{ once: false }}
             initial={{ opacity: 0, x: 50 }}
@@ -69,7 +73,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
                   <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">
                     +58 4243772811
                   </p>
-                  <a href="#">
+                  <a href="https://wa.me/584243772811">
                     <span className="block dark:text-mainCyan text-mainDarkCyan">
                       Send a message
                     </span>
@@ -88,7 +92,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
                   <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">
                     xFran#3250
                   </p>
-                  <a href="#">
+                  <a href="https://discordapp.com/users/478965957650546728">
                     <span className="block dark:text-mainCyan text-mainDarkCyan">
                       Send a message
                     </span>
@@ -107,7 +111,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
                   <p className="dark:text-white font-semibold py-2 text-mainExtraDarkBlue/90">
                     @itsxfran
                   </p>
-                  <a href="#">
+                  <a href="es.fiverr.com/itsxfran">
                     <span className="block dark:text-mainCyan text-mainDarkCyan">
                       Send a message
                     </span>
