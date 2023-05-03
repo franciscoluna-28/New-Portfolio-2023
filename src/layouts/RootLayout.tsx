@@ -1,14 +1,18 @@
 import { Outlet } from "react-router";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { useRef } from "react"
+import { useContext } from "react";
+import { RefContext } from "../context/ScrollContext";
+
+
 
 
 
 
 export default function RootLayout(){
-      // Crea la referencia y especifica el tipo
-  const homeRef = useRef<HTMLDivElement>(null);
+    const { homeRef } = useContext(RefContext);
+
+
 
 
     return(
@@ -16,9 +20,8 @@ export default function RootLayout(){
         <Navbar/>
         <main ref={homeRef}>
         <Outlet/>
-       {/*  <span className="flex py-4 justify-center dark:text-mainDarkBlue">© Copyright 2023 Francisco Luna</span> */}
         </main>
-        <Footer homeRef={homeRef}/>
+        <Footer/>
         </>
     )
 }
