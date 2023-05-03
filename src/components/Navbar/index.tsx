@@ -6,17 +6,42 @@ import "../../styles/navbar.css";
 import { Toggle } from "../Switches/DarkModeSwitch";
 import "../../utils/glowStyles.css";
 import { RefObject } from "react";
+import Logo from "../../assets/dibujo-min.svg"
+import "../../index.css"
+import { useContext } from "react";
+import { RefContext } from "../../context/ScrollContext";
+import { ScrollToComponent } from "../../hooks/ScrollToComponent";
 
-// No hay DRY 
-type NavbarProps = {
-  homeRef: RefObject<HTMLDivElement>;
-}
+
 
 export default function Navbar() {
+
+  const {
+    homeRef,
+    aboutRef,
+    experienceRef,
+    projectsRef,
+    servicesRef,
+    portfolioRef,
+    contactRef,
+  } = useContext(RefContext);
+  const scrollToHomeRef = ScrollToComponent({ rootRef: homeRef });
+  const scrollToAboutRef = ScrollToComponent({ rootRef: aboutRef });
+  const scrollToExperienceRef = ScrollToComponent({ rootRef: experienceRef });
+  const scrollToProjectsRef = ScrollToComponent({ rootRef: projectsRef });
+  const scrollToServicesRef = ScrollToComponent({ rootRef: servicesRef });
+  const scrollToPortfolioRef = ScrollToComponent({ rootRef: portfolioRef });
+  const scrollToContactRef = ScrollToComponent({ rootRef: contactRef });
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
+  }
+
+  function handleMobileScroll(scrollFunction: Function){
+    toggleMenu();
+    scrollFunction();
   }
 
   return (
@@ -47,46 +72,57 @@ export default function Navbar() {
                   <NavLink
                     className="hamburguer-bar-link"
                     to="/"
-                    onClick={toggleMenu}
+                    onClick={() => handleMobileScroll(scrollToHomeRef)}
                   >
                     Home
                   </NavLink>
                   <NavLink
                     className="hamburguer-bar-link"
-                    to="/about"
-                    onClick={toggleMenu}
+                    to="/"
+                    onClick={() => handleMobileScroll(scrollToAboutRef)}
                   >
                     About
                   </NavLink>
                   <NavLink
                     className="hamburguer-bar-link"
-                    to="/projects"
-                    onClick={toggleMenu}
+                    to="/"
+                    onClick={() => handleMobileScroll(scrollToProjectsRef)}
                   >
                     Projects
                   </NavLink>
                   <NavLink
                     className="hamburguer-bar-link"
-                    to="/tech-stack"
-                    onClick={toggleMenu}
+                    to="/"
+                    onClick={() => handleMobileScroll(scrollToExperienceRef)}
                   >
-                    Tech Stack
+                    Skills & Experience
                   </NavLink>
                   <NavLink
                     className="hamburguer-bar-link"
-                    to="/contact"
-                    onClick={toggleMenu}
+                    to="/"
+                    onClick={() => handleMobileScroll(scrollToContactRef)}
                   >
                     Contact
                   </NavLink>
+
 
                   <div className="w-full" onClick={toggleMenu}>
                     <a
                       href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU"
                       download=""
                     >
-                      <button className="hamburguer-bar-link w-full text-left">
+                      <button className="hamburguer-bar-link w-full text-left flex justify-center">
                         My CV in Spanish
+                      </button>
+                    </a>
+                  </div>
+                  <div className="w-full" onClick={toggleMenu}>
+                    <a
+                      href="https://drive.google.com/uc?export=download&id=1dyDveL2OwgV9bIb7XbXJsJUGvZedIhcO"
+                      download=""
+                    >
+                      <button className="hamburguer-bar-link w-full text-left flex justify-center">
+                        My CV in English
                       </button>
                     </a>
                   </div>
@@ -98,30 +134,36 @@ export default function Navbar() {
             )}
           </AnimatePresence>
           <section className="hidden lg:flex gap-20 font-medium items-center">
-            <NavLink className="nav-link" to="/">
+            <NavLink className="nav-link" to="/" onClick={scrollToHomeRef}>
               Home
             </NavLink>
-            <NavLink className=" nav-link" to="/about">
+            <NavLink className="nav-link" to="/" onClick={scrollToAboutRef}>
               About
             </NavLink>
-            <NavLink className="nav-link" to="/projects">
+            <NavLink className="nav-link" onClick={scrollToProjectsRef} to="/">
               Projects
             </NavLink>
-            <NavLink className="nav-link" to="/tech-stack">
-              Tech Stack
+            <NavLink className="nav-link" onClick={scrollToExperienceRef} to="/">
+              Skills
             </NavLink>
-            <NavLink className="nav-link" to="/contact">
+            <NavLink className="nav-link" onClick={scrollToContactRef} to="/">
               Contact
             </NavLink>
+
             <Toggle />
             <div className="w-full">
               <a
                 href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU"
                 download=""
               >
-                <button className={"primary-button"}>My CV in Spanish</button>
+                
+                <button className={"primary-button px-8 py-4"}>CV in Spanish</button>
               </a>
+              
             </div>
+
+              <img className="max-h-64 w-12" alt="Francisco Luna Logo" src={Logo}></img>
+
           </section>
         </nav>
       </header>
