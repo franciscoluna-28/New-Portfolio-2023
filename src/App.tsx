@@ -13,6 +13,7 @@ import Projects from "./pages/Projects";
 import RootLayout from "./layouts/RootLayout";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "./context/DarkModeContext";
+import { RefProvider } from "./context/ScrollContext";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,9 +28,11 @@ const router = createBrowserRouter(
 
 function App() {
   return (
+    <RefProvider>
     <ThemeProvider>
       <RouterProvider router={router} />
     </ThemeProvider>
+    </RefProvider>
   );
 }
 
