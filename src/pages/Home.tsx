@@ -2,13 +2,9 @@ import personalImage from "../assets/testImage.jpg";
 import NavigationButton from "../components/Buttons/NavigationButton";
 import SkillsIcons from "../components/Icons/SkillIscons";
 import { motion } from "framer-motion";
-import { AiOutlineMail } from "react-icons/ai";
-import { FaWhatsapp } from "react-icons/fa";
-import { FaDiscord } from "react-icons/fa";
-import { BsFillBriefcaseFill } from "react-icons/bs";
-import Footer from "../components/MediaLinks";
-import { BsChevronDoubleDown } from "react-icons/bs";
-import { useRef } from "react"
+import { useContext } from "react";
+import { RefContext } from "../context/ScrollContext";
+
 
 import "../utils/glowStyles.css";
 
@@ -18,30 +14,15 @@ import Experience from "../components/Experience";
 import Projects from "./Projects";
 import Contact from "../components/Contact";
 import MainSocialMedia from "../components/MediaLinks";
-import UIUXDesign from "../components/UI-UX-Design";
-
-
-
-
+import UIUXDesign from "../components/About";
+import { ScrollToComponent } from "../hooks/ScrollToComponent";
 
 export default function Home() {
-  // Scrolling views
-
-type RefType = HTMLDivElement | null;
-
-
-  const contactRef = useRef<RefType>(null);
-  const projectsRef = useRef<RefType>(null);
-
-
-  const handleClick = () => {
-    contactRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const handleClick2 = () => {
-    projectsRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
-
+  const { contactRef, portfolioRef } = useContext(RefContext);
+  const scrollToContactRef = ScrollToComponent({ rootRef: contactRef });
+  const scrollToPortfolioRef = ScrollToComponent({ rootRef: portfolioRef });
+  
+  
 
 
   return (
@@ -66,8 +47,13 @@ type RefType = HTMLDivElement | null;
               <motion.div>
                 <article className="py-4">
                   <div className="flex items-center">
-                  <button onClick={handleClick} className="dark:text-white text-mainExtraDarkBlue font-bold flex items-center gap-4">Go to contact</button>
-                  <MainSocialMedia />
+                    <button
+                      onClick={scrollToContactRef}
+                      className="dark:text-white text-mainExtraDarkBlue font-bold flex items-center gap-4"
+                    >
+                      Go to contact
+                    </button>
+                    <MainSocialMedia />
                   </div>
                   <h1
                     className="font-bold text-4xl flex text-left py-2 max-639:justify-center max-639:text-4xl main
@@ -87,11 +73,11 @@ type RefType = HTMLDivElement | null;
                   >
                     Welcome to my portfolio! I'm Francisco, 18 years old Front
                     End Developer from Venezuela. I'm currently studying Systems
-                    Engineering at Bicentenary University of Aragua. My main job is creating web
-                    applications for the web, whether you need to grow your
+                    Engineering at Bicentenary University of Aragua. My main job
+                    is creating web applications, whether you need to grow your
                     business, personal brand or want to create your dream
                     project. Here you'll be able to see my projects and reach
-                    me, I'll be glad to help.
+                    out to me, I'll be glad to help.
                   </p>
                 </article>
               </motion.div>
@@ -108,7 +94,7 @@ type RefType = HTMLDivElement | null;
                     download=""
                   >
                     <button className={"secondary-button"}>
-                      My CV in English
+                      CV in English
                     </button>
                   </a>
                 </div>
@@ -135,30 +121,27 @@ type RefType = HTMLDivElement | null;
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", duration: 1, delay: 0.15 }}
           >
-                      <UIUXDesign/>
+            <UIUXDesign />
             <Experience />
-            <button onClick={handleClick2}
-          className={"primary-button mt-12 w-full"}
-        >See my projects</button>
+            <button
+              onClick={scrollToPortfolioRef}
+              className={"primary-button mt-12 w-full"}
+            >
+              See my projects
+            </button>
             <ProjectsCarousel />
           </motion.div>
 
           <Services />
-          <div ref={projectsRef}>
-          <Projects />
-
+          <div ref={portfolioRef}>
+            <Projects />
           </div>
-
         </article>
 
-         
-                <div className="w-full" ref={contactRef}>
-                <Contact/>
-                </div>
-
-
+        <div className="w-full" ref={contactRef}>
+          <Contact />
+        </div>
       </section>
     </motion.div>
   );
 }
-
