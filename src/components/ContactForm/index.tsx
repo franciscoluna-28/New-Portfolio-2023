@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import NavigationButton from "../../components/Buttons/NavigationButton";
 
 type ContactFormProps = {
   serviceId: string;
@@ -69,7 +68,7 @@ export default function ContactForm({
       className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
 text-mainExtraDarkBlue dark:text-white lg:text-5xl"
     >
-      Reach me
+      Reach me out
     </h3>
     <h4
       className="text-mainDarkCyan text-2xl dark:text-mainCyan font-bold text-left 
