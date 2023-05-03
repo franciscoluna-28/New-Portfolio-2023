@@ -3,7 +3,9 @@ import { Autoplay, Navigation, Pagination, EffectCards } from "swiper";
 import { createdProjects } from "../PersonalProjects/data";
 import "swiper/swiper-bundle.css";
 import "../../utils/glowStyles.css";
-import NavigationButton from "../Buttons/NavigationButton";
+import { useContext } from "react";
+import { RefContext } from "../../context/ScrollContext";
+import { ScrollToComponent } from "../../hooks/ScrollToComponent";
 
 
 import "swiper/css";
@@ -12,9 +14,11 @@ import "swiper/css/effect-fade";
 
 
 export default function ProjectsCarousel() {
+  const { projectsRef, portfolioRef } = useContext(RefContext);
+  const scrollToPortfolioRef = ScrollToComponent({ rootRef: portfolioRef });
   return (
     <>
-      <div className="flex flex-col justify-center items-center py-12">
+      <div className="flex flex-col justify-center items-center py-12" ref={projectsRef}>
         <h3
           className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
        text-mainExtraDarkBlue dark:text-white lg:text-5xl"
@@ -75,11 +79,11 @@ export default function ProjectsCarousel() {
                       <p className="text-mainSilver hidden leading-loose sm:block text-center text-base font-medium">
                         {project.description}
                       </p>
-                      <a href="/projects">
-                        <span className="text-xl font-bold dark:text-mainCyan text-mainDarkCyan py-2">
+
+                        <span onClick={scrollToPortfolioRef} className="text-xl font-bold dark:text-mainCyan text-mainDarkCyan py-2">
                           Learn More
                         </span>
-                      </a>
+
                     </div>
                   </div>
                 </div>
