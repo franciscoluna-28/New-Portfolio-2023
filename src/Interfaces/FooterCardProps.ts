@@ -3,4 +3,5 @@ export interface FooterCardProps {
     styleClass: string;
     icon: any;
     key: number;
+    title: string;
 }
