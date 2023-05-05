@@ -143,7 +143,7 @@ export default function Footer() {
           </li>
         </a>
       </ul>
-      <span className="m-auto text-sm mt-4 text-center text-white">
+      <span className="m-auto text-sm mt-4 text-center dark:text-mainSilver text-white">
         © Francisco Luna All rights reserved 2023
       </span>
     </footer>
