@@ -1,6 +1,5 @@
 import { Icon } from "@fortawesome/fontawesome-svg-core";
-import { IconType } from "react-icons";
-import { FaHtml5, FaCss3, FaReact, FaJsSquare, FaGithub } from "react-icons/fa";
+import { FaHtml5, FaCss3, FaReact, FaJsSquare, FaGithub, FaFigma } from "react-icons/fa";
 import {
   SiTypescript,
   SiTailwindcss,
@@ -15,7 +14,6 @@ import { SiMongodb } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { FaNpm } from "react-icons/fa";
 
-// ...
 
 enum ExperienceLevels {
   Experienced = "Experienced",
@@ -55,8 +53,8 @@ export const experienceAndSkills: Technology[] = [
       },
       {
         name: "React",
-        level: ExperienceLevels.Experienced,
-        icon: FaCss3,
+        level: ExperienceLevels.Intermediate,
+        icon: FaReact,
         id: 3,
       },
       {
@@ -90,9 +88,9 @@ export const experienceAndSkills: Technology[] = [
         id: 8,
       },
       {
-        name: "React Native",
+        name: "Figma",
         level: ExperienceLevels.Intermediate,
-        icon: FaReact,
+        icon: FaFigma,
         id: 9,
       },
       {
@@ -109,7 +107,7 @@ export const experienceAndSkills: Technology[] = [
       },
       {
         name: "NextJS",
-        level: ExperienceLevels.Intermediate,
+        level: ExperienceLevels.Beginner,
         icon: SiNextdotjs,
         id: 12,
       },
