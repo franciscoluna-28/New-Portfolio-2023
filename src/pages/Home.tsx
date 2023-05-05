@@ -4,6 +4,7 @@ import SkillsIcons from "../components/Icons/SkillIscons";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { RefContext } from "../context/ScrollContext";
+import Me from "../assets/me.png"
 
 
 import "../utils/glowStyles.css";
@@ -18,7 +19,8 @@ import UIUXDesign from "../components/About";
 import { ScrollToComponent } from "../hooks/ScrollToComponent";
 
 export default function Home() {
-  const { contactRef, portfolioRef } = useContext(RefContext);
+  const { contactRef, portfolioRef, homeRef } = useContext(RefContext);
+  
   const scrollToContactRef = ScrollToComponent({ rootRef: contactRef });
   const scrollToPortfolioRef = ScrollToComponent({ rootRef: portfolioRef });
   
@@ -27,13 +29,12 @@ export default function Home() {
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <section className="p-8 lg:p-16 flex items-center flex-col justify-center min-h-screen overflow-x-hidden">
-        <article className="flex items-center flex-col text-center">
-          <div className="flex flex-col items-center lg:grid lg:grid-flow-col lg:gap-12 lg:justify-center lg:px-8 py-24">
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 0.5 }}>
+      <section className="p-8 min-w-full lg:p-16 flex items-center flex-col justify-center min-h-screen overflow-x-hidden" ref={homeRef}>
+        <article className="flex items-center flex-col text-center w-full">
+          <div className="flex flex-col items-center lg:grid lg:grid-flow-col lg:gap-12 lg:justify-center lg:px-8 lg:12 py-6">
             <figure className="py-4">
               <img
                 className="h-52 w-52 z-40 rounded-full border-white animate border-2 border-double main-image p-1 floating glow-main lg:h-72 lg:w-72"
@@ -44,7 +45,6 @@ export default function Home() {
             </figure>
 
             <div className="px-auto lg:px-16">
-              <motion.div>
                 <article className="py-4">
                   <div className="flex items-center">
                     <button
@@ -73,64 +73,42 @@ export default function Home() {
                   >
                     Welcome to my portfolio! I'm Francisco, 18 years old Front
                     End Developer from Venezuela. I'm currently studying Systems
-                    Engineering at Bicentenary University of Aragua. My main job
-                    is creating web applications, whether you need to grow your
-                    business, personal brand or want to create your dream
-                    project. Here you'll be able to see my projects and reach
-                    out to me, I'll be glad to help.
+                    Engineering at Bicentenary University of Aragua. If you're looking to establish an online presence for your business or personal brand, I can help you achieve that through the creation of custom web applications tailored to your specific needs. Whether you need an e-commerce store, an informational website, or anything else, I'm here to assist. View my previous projects and contact me for personalized consultation. I'm ready to help you grow your online presence and reach your goals.
                   </p>
                 </article>
-              </motion.div>
 
               <div className="w-full flex gap-4 flex-col md:flex-row">
-                <NavigationButton
-                  text={"Contact"}
-                  route={"/contact"}
-                  styleClass={"primary-button"}
-                />
+<button onClick={scrollToContactRef} className="primary-button">Contact
+    
+</button>
                 <div className="w-full">
                   <a
                     href="https://drive.google.com/uc?export=download&id=1dyDveL2OwgV9bIb7XbXJsJUGvZedIhcO"
                     download=""
                   >
                     <button className={"secondary-button"}>
-                      CV in English
+                      English CV
                     </button>
                   </a>
                 </div>
               </div>
-
-              <motion.div
-                animate={{
-                  opacity: [0, 1, 0],
-                  transition: {
-                    duration: 4,
-                    times: [0, 0.5, 1],
-                    repeat: Infinity,
-                  },
-                }}
-              >
                 <SkillsIcons />
-              </motion.div>
+
             </div>
           </div>
 
-          <motion.div
-            viewport={{ once: false }}
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ type: "spring", duration: 1, delay: 0.15 }}
-          >
+
+            <img className="bg-cover rounded-full h-72 mt-20 w-72 glow-main animate border-2 border-double main-image p-1 floating !z-0" src={Me}></img>
             <UIUXDesign />
             <Experience />
+            <ProjectsCarousel />
             <button
               onClick={scrollToPortfolioRef}
               className={"primary-button mt-12 w-full"}
             >
               See my projects
             </button>
-            <ProjectsCarousel />
-          </motion.div>
+
 
           <Services />
           <div ref={portfolioRef}>
@@ -142,6 +120,7 @@ export default function Home() {
           <Contact />
         </div>
       </section>
-    </motion.div>
+      </motion.div>
+
   );
 }
