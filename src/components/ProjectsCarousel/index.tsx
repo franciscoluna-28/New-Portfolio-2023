@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination, EffectCards } from "swiper";
-import { createdProjects } from "../PersonalProjects/data";
+import { createdProjects } from "../../data/projectDatabase";
 import "swiper/swiper-bundle.css";
 import "../../utils/glowStyles.css";
 import { useContext } from "react";
@@ -37,7 +37,7 @@ export default function ProjectsCarousel() {
 
       </div>
 
-      <div className="shadow-md max-w-fit max-h-fit">
+      <div className="shadow-md w-full">
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
@@ -63,15 +63,9 @@ export default function ProjectsCarousel() {
         >
           {createdProjects.map((project) => {
             return (
-              <SwiperSlide key={project.id}>
-                <div className="relative bg-center">
-                  <img
-                    loading="lazy"
-                    className="w-full h-full cover-full min-w-min rounded-md overflow-hidden pt-4 filter object-cover brightness-75 duration-300 ease-in blur-sm"
-                    src={project.image}
-                    alt={project.title}
-                  />
-                  <div className="absolute inset-0 bg-black/70 flex items-center justify-center p-32">
+              <SwiperSlide key={project.id} className="h-full w-full">
+                <div style={{backgroundImage: `url(${project.image})`}} className="w-full bg-no-repeat min-h-screen bg-cover bg-center bg-fixed">
+                  <div className="absolute inset-0 md:bg-black/70 backdrop-blur-sm bg-black/80 flex items-center justify-center p-32">
                     <div className="text-white text-center">
                       <h3 className="font-bold text-3xl lg:text-6xl lg:mb-4">
                         {project.title}
