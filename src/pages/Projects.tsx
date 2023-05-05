@@ -25,7 +25,7 @@ flex py-2 max-639:justify-center lg:text-3xl mb-2">
             Projects
           </h4>
           <p className="dark:text-mainSilver/80 md:text-xl text-center leading-loose">Showcase of my personal finished projects. I explain the
-          problem I wanted to solve and the technologies and concepts I applied</p>
+          problem I solved and the technologies and concepts used</p>
           </div>
     <FilterByMainTechnology/>
     
