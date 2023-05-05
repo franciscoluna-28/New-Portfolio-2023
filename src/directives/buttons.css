@@ -1,7 +1,7 @@
 .primary-button {
-    @apply bg-mainDarkCyan flex justify-items-start justify-center items-center duration-150 ease-in h-16 font-normal hover:text-mainExtraDarkBlue w-full hover:border-transparent rounded border-none text-white dark:bg-mainCyan dark:text-mainExtraDarkBlue dark:hover:text-mainDarkCyan shadow-lg shadow-mainCyan/10
+    @apply bg-mainDarkCyan/90 text-white font-semibold flex justify-items-start justify-center items-center duration-150 ease-in h-16 hover:text-white w-full hover:border-transparent rounded border-none dark:bg-mainCyan dark:text-mainExtraDarkBlue dark:hover:text-mainDarkCyan shadow-lg shadow-mainCyan/10
 }
 
 .secondary-button {
-    @apply border-2 border-mainDarkCyan text-mainExtraDarkBlue/70 flex justify-items-start justify-center items-center h-16 font-normal rounded w-full hover:text-mainDarkCyan duration-150 dark:border-mainCyan dark:text-white dark:hover:text-mainExtraDarkBlue dark:hover:bg-mainCyan shadow-lg shadow-mainCyan/10
+    @apply border-2 border-mainDarkCyan text-mainExtraDarkBlue/70 flex justify-items-start justify-center items-center h-16 font-semibold rounded w-full hover:text-mainDarkCyan duration-150 dark:border-mainCyan dark:text-white dark:hover:text-mainExtraDarkBlue dark:hover:bg-mainCyan shadow-lg shadow-mainCyan/10
 }
