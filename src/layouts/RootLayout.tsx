@@ -10,15 +10,10 @@ import { RefContext } from "../context/ScrollContext";
 
 
 export default function RootLayout(){
-    const { homeRef } = useContext(RefContext);
-
-
-
-
     return(
         <>
         <Navbar/>
-        <main ref={homeRef}>
+        <main className="justify-center flex">
         <Outlet/>
         </main>
         <Footer/>
