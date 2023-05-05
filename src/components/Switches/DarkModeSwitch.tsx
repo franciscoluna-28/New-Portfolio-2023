@@ -30,8 +30,8 @@ export const Toggle = () => {
     }, [setIsDarkModeActive, setTheme]);
 
     return (
-        <button onClick={toggleTheme} className="peer">
-            {isDark() ? <FaMoon className="dark:text-mainSilver text-xl dark:hover:text-white text-mainExtraDarkBlue/70"/> : <BsSunFill className="dark:text-mainSilver text-xl dark:hover:text-white text-mainExtraDarkBlue/70"/>}
+        <button aria-label="Dark and light mode switch" onClick={toggleTheme} className="peer">
+            {isDark() ? <FaMoon className="dark:text-mainSilver text-xl dark:hover:text-white text-mainExtraDarkBlue/70"/> : <BsSunFill className=" hover:text-mainExtraDarkBlue dark:text-mainSilver text-xl dark:hover:text-white text-mainExtraDarkBlue/70"/>}
         </button>
     )
 }
