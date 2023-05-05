@@ -51,6 +51,7 @@ export default function Navbar() {
           <div className="p-4 lg:hidden">
                     <Toggle />
                   </div>
+                  <img onClick={scrollToHomeRef} className="max-h-64 lg:hidden w-12 cursor-pointer" alt="Francisco Luna Logo" src={Logo}></img>
 
           <AnimatePresence>
             {isMenuOpen && (
@@ -163,7 +164,7 @@ export default function Navbar() {
               
             </div>
 
-              <img onClick={scrollToHomeRef} className="max-h-64 w-12 cursor-pointer" alt="Francisco Luna Logo" src={Logo}></img>
+              <img onClick={scrollToHomeRef} className="max-h-64 w-12 h-16 cursor-pointer" alt="Francisco Luna Logo" src={Logo}></img>
 
           </section>
         </nav>

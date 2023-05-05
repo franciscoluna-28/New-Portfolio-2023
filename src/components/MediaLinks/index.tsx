@@ -24,11 +24,13 @@ const socialMedia = [
     id: 3,
     link: "https://www.linkedin.com/in/franciscoluna28",
     icon: faLinkedin,
+    name: "Linkedin"
   },
   {
     id: 4,
     link: "https://github.com/franciscoluna-28",
     icon: faGithub,
+    name: "Github"
   },
 ];
 
@@ -39,14 +41,15 @@ const MainSocialMedia = () => {
       {socialMedia.map((socialMediaCard) => (
         <FooterCard
           key={socialMediaCard.id}
-          icon={<FontAwesomeIcon icon={socialMediaCard.icon} />}
+          icon={<FontAwesomeIcon aria-label={`${socialMediaCard.name}} Link`} icon={socialMediaCard.icon} />}
           socialLink={socialMediaCard.link}
           styleClass="dark:text-white text-mainExtraDarkBlue"
 
+
         />
       ))}
-      <a href="https://linktr.ee/franciscolunadev">
-        <SiLinktree className="dark:text-white text-mainExtraDarkBlue" />
+      <a aria-label="Frnacisco Luna Linktree profile link" href="https://linktr.ee/franciscolunadev">
+        <SiLinktree aria-label="Francisco Luna Linktree profile icon" className="dark:text-white text-mainExtraDarkBlue" />
       </a>
       </ul>
     </section>
