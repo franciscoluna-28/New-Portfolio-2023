@@ -47,8 +47,11 @@ export default function Navbar() {
   return (
     <>
       <header className="p-8 lg:p-6 sticky top-0 z-50 dark:bg-mainExtraDarkBlue/90 bg-white/90 shadow-lg">
-        <nav className="flex lg:justify-center">
+        <nav className="flex lg:justify-center items-center justify-between">
           <FaBars className="bars" onClick={toggleMenu} />
+          <div className="p-4 lg:hidden">
+                    <Toggle />
+                  </div>
 
           <AnimatePresence>
             {isMenuOpen && (
@@ -70,35 +73,35 @@ export default function Navbar() {
                   className="hamburguer-bar"
                 >
                   <NavLink
-                    className="hamburguer-bar-link"
+                    className="hamburguer-bar-link w-full"
                     to="/"
                     onClick={() => handleMobileScroll(scrollToHomeRef)}
                   >
                     Home
                   </NavLink>
                   <NavLink
-                    className="hamburguer-bar-link"
+                    className="hamburguer-bar-link w-full"
                     to="/"
                     onClick={() => handleMobileScroll(scrollToAboutRef)}
                   >
                     About
                   </NavLink>
                   <NavLink
-                    className="hamburguer-bar-link"
+                    className="hamburguer-bar-link w-full"
                     to="/"
                     onClick={() => handleMobileScroll(scrollToProjectsRef)}
                   >
                     Projects
                   </NavLink>
                   <NavLink
-                    className="hamburguer-bar-link"
+                    className="hamburguer-bar-link w-full"
                     to="/"
                     onClick={() => handleMobileScroll(scrollToExperienceRef)}
                   >
                     Skills & Experience
                   </NavLink>
                   <NavLink
-                    className="hamburguer-bar-link"
+                    className="hamburguer-bar-link w-full"
                     to="/"
                     onClick={() => handleMobileScroll(scrollToContactRef)}
                   >
@@ -125,9 +128,6 @@ export default function Navbar() {
                         My CV in English
                       </button>
                     </a>
-                  </div>
-                  <div className="p-4">
-                    <Toggle />
                   </div>
                 </motion.section>
               </>
