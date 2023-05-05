@@ -11,7 +11,7 @@
 }
 
 .hamburguer-bar-link {
-    @apply block p-4 md:text-center dark:text-mainSilver text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan hover:text-white
+    @apply block font-semibold dark:hover:text-white p-4 md:text-center dark:text-mainSilver text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan hover:text-white
 }
 
 .nav-link{
