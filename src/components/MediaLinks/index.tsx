@@ -35,14 +35,14 @@ const socialMedia = [
 const MainSocialMedia = () => {
   return (
     <section className="flex justify-start gap-4 m-4 text-xl items-center">
-      <ul>
+      <ul className="flex gap-4 items-center">
       {socialMedia.map((socialMediaCard) => (
         <FooterCard
           key={socialMediaCard.id}
           icon={<FontAwesomeIcon icon={socialMediaCard.icon} />}
           socialLink={socialMediaCard.link}
           styleClass="dark:text-white text-mainExtraDarkBlue"
-          title="Social media button"
+
         />
       ))}
       <a href="https://linktr.ee/franciscolunadev">
