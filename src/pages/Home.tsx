@@ -92,7 +92,23 @@ export default function Home() {
                   </a>
                 </div>
               </div>
+
+              <motion.div
+                animate={{
+                  opacity: [0, 1, 0],
+                  transition: { duration: 4, times: [0, 0.5, 1], repeat: Infinity }
+                }}
+              >
                 <SkillsIcons />
+              </motion.div>
+                <a
+                      href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU"
+                      download=""
+                    >
+                      <button className="lg:hidden m-auto dark:text-white pt-8 font-semibold text-mainExtraDarkblue/80 w-full text-left flex justify-center">
+                        CV in Spanish
+                      </button>
+                    </a>
 
             </div>
           </div>
@@ -102,12 +118,6 @@ export default function Home() {
             <UIUXDesign />
             <Experience />
             <ProjectsCarousel />
-            <button
-              onClick={scrollToPortfolioRef}
-              className={"primary-button mt-12 w-full"}
-            >
-              See my projects
-            </button>
 
 
           <Services />
