@@ -68,8 +68,7 @@ export default function Home() {
                     Front End Developer
                   </h2>
                   <p
-                    className="text-silver leading-loose py-2 text-left w-auto max-639:w-72 max-639:m-auto max-639:text-center text-xl dark:text-mainSilver
-            text-mainDarkBlue/70"
+                    className="text-silver leading-loose py-2 text-left w-auto max-639:w-72 max-639:m-auto max-639:text-center text-xl dark:text-mainSilver text-mainExtraDarkBlue/70"
                   >
                     Welcome to my portfolio! I'm Francisco, 18 years old Front
                     End Developer from Venezuela. I'm currently studying Systems
@@ -114,7 +113,7 @@ export default function Home() {
           </div>
 
 
-            <img className="bg-cover rounded-full h-72 mt-20 w-72 glow-main animate border-2 border-double main-image p-1 floating !z-0" src={Me}></img>
+            <img alt="Francisco Luna" className="bg-cover rounded-full h-72 mt-20 w-72 glow-main animate border-2 border-double main-image p-1 floating !z-0" src={Me}></img>
             <UIUXDesign />
             <Experience />
             <ProjectsCarousel />
