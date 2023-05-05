@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { useContext } from "react";
+import { RefContext } from "../../context/ScrollContext";
 
 type ContactFormProps = {
   serviceId: string;
@@ -59,11 +61,14 @@ export default function ContactForm({
         setIsError(true);
         console.log('FAILED...', error);
       });
+      
   }
+
+  const { emailRef } = useContext(RefContext);
 
   return (
     <>
-    <div className="flex flex-col justify-center items-center py-12">
+    <div className="flex flex-col justify-center items-center py-12" ref={emailRef}>
     <h3
       className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
 text-mainExtraDarkBlue dark:text-white lg:text-5xl"
@@ -131,13 +136,13 @@ flex py-2 max-639:justify-center lg:text-3xl"
             </button>
           </div>
 
-          {isSuccess && (
-            <p className="text-green-500">Message sent successfully!</p>
-          )}
+          {isError && !isSuccess && (
+  <p className="text-red-600 py-4">An error occurred, please try again.</p>
+)}
 
-          {isError && (
-            <p className="text-red-500">An error occurred, please try again.</p>
-          )}
+{isSuccess && isError && (
+  <p className="py-4 text-green-500">Message sent successfully!</p>
+)}
         </div>
       </form>
     </div>
