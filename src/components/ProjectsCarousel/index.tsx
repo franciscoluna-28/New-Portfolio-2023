@@ -32,9 +32,14 @@ export default function ProjectsCarousel() {
           That I've created
         </h4>
         <p className="dark:text-mainSilver/80 md:text-xl">
-          See what I'm able to do
+          See what I'm able to create
         </p>
-
+        <button
+              onClick={scrollToPortfolioRef}
+              className={"primary-button mt-6 w-full"}
+            >
+              See my projects
+            </button>
       </div>
 
       <div className="shadow-md w-full">
