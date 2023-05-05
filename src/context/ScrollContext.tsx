@@ -10,6 +10,7 @@ type RefContextProps = {
   portfolioRef: RefType;
   projectsRef: RefType ;
   contactRef: RefType;
+  emailRef: RefType;
 };
 
 interface RefProviderProps {
@@ -24,6 +25,7 @@ export const RefContext = createContext<RefContextProps>({
   portfolioRef: null,
   projectsRef: null,
   contactRef: null,
+  emailRef: null,
 });
 
 
@@ -35,6 +37,7 @@ export const RefProvider = ({ children }: RefProviderProps) => {
   const portfolioRef = useRef<HTMLDivElement>(null);
   const projectsRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
+  const emailRef = useRef<HTMLDivElement>(null);
 
   return (
     <RefContext.Provider
@@ -46,6 +49,7 @@ export const RefProvider = ({ children }: RefProviderProps) => {
         portfolioRef,
         projectsRef,
         contactRef,
+        emailRef
       }}
     >
       {children}
