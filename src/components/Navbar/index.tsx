@@ -30,7 +30,6 @@ export default function Navbar() {
   const scrollToExperienceRef = ScrollToComponent({ rootRef: experienceRef });
   const scrollToProjectsRef = ScrollToComponent({ rootRef: projectsRef });
   const scrollToServicesRef = ScrollToComponent({ rootRef: servicesRef });
-  const scrollToPortfolioRef = ScrollToComponent({ rootRef: portfolioRef });
   const scrollToContactRef = ScrollToComponent({ rootRef: contactRef });
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -89,17 +88,18 @@ export default function Navbar() {
                   <NavLink
                     className="hamburguer-bar-link w-full"
                     to="/"
-                    onClick={() => handleMobileScroll(scrollToProjectsRef)}
-                  >
-                    Projects
-                  </NavLink>
-                  <NavLink
-                    className="hamburguer-bar-link w-full"
-                    to="/"
                     onClick={() => handleMobileScroll(scrollToExperienceRef)}
                   >
                     Skills & Experience
                   </NavLink>
+                  <NavLink
+                    className="hamburguer-bar-link w-full"
+                    to="/"
+                    onClick={() => handleMobileScroll(scrollToProjectsRef)}
+                  >
+                    Projects
+                  </NavLink>
+
                   <NavLink
                     className="hamburguer-bar-link w-full"
                     to="/"
@@ -115,7 +115,7 @@ export default function Navbar() {
                       download=""
                     >
                       <button className="hamburguer-bar-link w-full text-left flex justify-center">
-                        My CV in Spanish
+                        Spanish CV
                       </button>
                     </a>
                   </div>
@@ -125,7 +125,7 @@ export default function Navbar() {
                       download=""
                     >
                       <button className="hamburguer-bar-link w-full text-left flex justify-center">
-                        My CV in English
+                        English CV
                       </button>
                     </a>
                   </div>
@@ -140,14 +140,15 @@ export default function Navbar() {
             <NavLink className="nav-link" to="/" onClick={scrollToAboutRef}>
               About
             </NavLink>
+                        <NavLink className="nav-link" onClick={scrollToExperienceRef} to="/">
+              Skills
+            </NavLink>
             <NavLink className="nav-link" onClick={scrollToProjectsRef} to="/">
               Projects
             </NavLink>
-            <NavLink className="nav-link" onClick={scrollToExperienceRef} to="/">
-              Skills
-            </NavLink>
-            <NavLink className="nav-link" onClick={scrollToContactRef} to="/">
-              Contact
+
+            <NavLink className="nav-link" onClick={scrollToServicesRef} to="/">
+              Services
             </NavLink>
 
             <Toggle />
@@ -157,12 +158,12 @@ export default function Navbar() {
                 download=""
               >
                 
-                <button className={"primary-button px-8 py-4"}>CV in Spanish</button>
+                <button className={"primary-button px-8 py-4"}>Spanish CV</button>
               </a>
               
             </div>
 
-              <img className="max-h-64 w-12" alt="Francisco Luna Logo" src={Logo}></img>
+              <img onClick={scrollToHomeRef} className="max-h-64 w-12 cursor-pointer" alt="Francisco Luna Logo" src={Logo}></img>
 
           </section>
         </nav>
