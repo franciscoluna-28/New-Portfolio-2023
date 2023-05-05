@@ -68,7 +68,7 @@ export default function ContactForm({
       className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
 text-mainExtraDarkBlue dark:text-white lg:text-5xl"
     >
-      Reach me out
+      Reach out to me
     </h3>
     <h4
       className="text-mainDarkCyan text-2xl dark:text-mainCyan font-bold text-left 
@@ -77,7 +77,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
      By Email
     </h4>
     <p className="dark:text-mainSilver/80 md:text-xl text-center">
-      I'll be glad to reply you back and connect
+      I'll be glad to reply you back and connect!
     </p>
   </div>
 
