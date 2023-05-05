@@ -21,8 +21,8 @@ export default function Experience() {
         >
           And Knowledge
         </h4>
-        <p className="dark:text-mainSilver/80 md:text-xl text-center">
-          Learn about my tech stack and the tools that I use
+        <p className="dark:text-mainSilver/80 text-mainExtraDarkBlue/70 md:text-xl">
+          Learn about my tech stack and the tools I use
         </p>
       </div>
 

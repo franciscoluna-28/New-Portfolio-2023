@@ -47,7 +47,7 @@ export function FilterByMainTechnology() {
         <div className="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg dark:bg-mainDarkBlue bg-white ring-1 ring-black ring-opacity-5 p-4">
           <div className="py-1" role="none">
             <button
-              className="text-gray-700 dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
+              className="text-mainExtraDarkBlue/70 hover:text-white dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
               dark:hover:bg-mainExtraDarkBlue/50 rounded-md hover:text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan"
               onClick={() => handleTechnologyChange("")}
               role="menuitem"
@@ -55,7 +55,7 @@ export function FilterByMainTechnology() {
               All
             </button>
             <button
-              className="text-gray-700 dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
+              className="text-mainExtraDarkBlue/70 hover:text-white dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
               dark:hover:bg-mainExtraDarkBlue/50 rounded-md hover:text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan"
               onClick={() => handleTechnologyChange("TypeScript")}
               role="menuitem"
@@ -63,7 +63,7 @@ export function FilterByMainTechnology() {
               TypeScript
             </button>
             <button
-              className="text-gray-700 dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
+              className="text-mainExtraDarkBlue/70 dark:text-mainSilver hover:text-white block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
               dark:hover:bg-mainExtraDarkBlue/50 rounded-md hover:text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan"
               onClick={() => handleTechnologyChange("React")}
               role="menuitem"
@@ -71,7 +71,7 @@ export function FilterByMainTechnology() {
               React
             </button>
             <button
-              className="text-gray-700 dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
+              className="text-mainExtraDarkBlue/70 hover:text-white dark:text-mainSilver block px-4 py-2 text-sm w-full text-left dark:hover:text-white 
               dark:hover:bg-mainExtraDarkBlue/50 rounded-md hover:text-mainExtraDarkBlue/70 hover:bg-mainDarkCyan"
               onClick={() => handleTechnologyChange("NodeJS")}
               role="menuitem"

@@ -21,7 +21,7 @@ export default function Services() {
 flex py-2 max-639:justify-center lg:text-3xl">
             I offer
           </h4>
-          <p className="dark:text-mainSilver/80 md:text-xl">As a Front - End developer</p>
+          <p className="dark:text-mainSilver/80 text-mainExtraDarkBlue/70 md:text-xl">As a Front - End Developer</p>
           </div>
       <div className="grid grid-flow-row gap-8 lg:grid-cols-3">
       {servicesInformation.map((service) => (

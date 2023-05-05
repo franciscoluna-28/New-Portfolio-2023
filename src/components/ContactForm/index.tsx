@@ -81,7 +81,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
     >
      By Email
     </h4>
-    <p className="dark:text-mainSilver/80 md:text-xl text-center">
+    <p className="dark:text-mainSilver/80 md:text-xl text-mainExtraDarkBlue/70 text-center">
       I'll be glad to reply you back and connect!
     </p>
   </div>

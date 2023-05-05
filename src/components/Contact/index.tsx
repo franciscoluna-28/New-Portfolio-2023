@@ -31,14 +31,14 @@ flex py-2 max-639:justify-center lg:text-3xl"
               >
                 In my Social Media
               </h4>
-              <p className="dark:text-mainSilver/80 md:text-xl text-center">
+              <p className="dark:text-mainSilver/80 md:text-xl text-mainExtraDarkBlue/70 text-center">
                 Let's connect and create something together!
               </p>
               <button
                       onClick={scrollToMailerRef}
-                      className="dark:text-white py-4 text-mainExtraDarkBlue font-bold flex items-center gap-4"
+                      className="dark:text-white py-4 text-mainExtraDarkBlue/70 font-bold flex items-center gap-4"
                     >
-                      Send me an emai
+                      Send me an email
                     </button>
             </div>
 

@@ -51,7 +51,7 @@ export default function ProjectCard({
             {mainTechnology}
           </div>
         </h2>
-        <p className="my-2 leading-loose dark:text-mainSilver/50 text-mainExtraDarkBlue/50 text-left">
+        <p className="my-2 text-lg leading-loose dark:text-mainSilver/50 text-mainExtraDarkBlue/60 text-left">
           {description}
         </p>
         <div className="card-actions justify-end flex-col w-full">

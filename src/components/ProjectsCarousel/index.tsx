@@ -31,7 +31,7 @@ export default function ProjectsCarousel() {
         >
           That I've created
         </h4>
-        <p className="dark:text-mainSilver/80 md:text-xl">
+        <p className="dark:text-mainSilver/80 text-mainExtraDarkBlue/70 md:text-xl">
           See what I'm able to create
         </p>
         <button

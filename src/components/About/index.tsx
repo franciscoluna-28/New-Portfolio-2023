@@ -1,14 +1,6 @@
 import { useContext } from "react";
 import { RefContext } from "../../context/ScrollContext";
 
-
-
-
-
-
-
-
-
 export default function About() {
   const { aboutRef } = useContext(RefContext);
     return(
@@ -26,7 +18,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
             >
               Who am I?
             </h4>
-            <p className="dark:text-mainSilver/80 md:text-xl text-center">
+            <p className="dark:text-mainSilver/80 text-mainExtraDarkBlue/70 md:text-xl">
               Get to know me better
             </p>
           </div>
