@@ -22,7 +22,7 @@ export default function Home() {
   const { contactRef, portfolioRef, homeRef } = useContext(RefContext);
   
   const scrollToContactRef = ScrollToComponent({ rootRef: contactRef });
-  const scrollToPortfolioRef = ScrollToComponent({ rootRef: portfolioRef });
+
   
   
 
