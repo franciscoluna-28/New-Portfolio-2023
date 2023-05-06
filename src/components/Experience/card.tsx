@@ -1,6 +1,6 @@
 import { Icon } from "@fortawesome/fontawesome-svg-core";
 import { Technology } from "../../data/experienceDatabase";
-import { IconType } from "react-icons";
+
 
 
 
