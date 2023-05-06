@@ -139,7 +139,7 @@ flex py-2 max-639:justify-center lg:text-3xl"
   <p className="text-red-600 py-4">An error occurred, please try again.</p>
 )}
 
-{isSuccess && isError && (
+{isSuccess && (
   <p className="py-4 text-green-500">Message sent successfully!</p>
 )}
         </div>
