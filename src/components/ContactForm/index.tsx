@@ -53,10 +53,12 @@ export default function ContactForm({
       .then((response: EmailJSResponseStatus) => {
         setIsSending(false);
         setIsSuccess(true);
+        console.log('SUCCESS!', response.status, response.text);
       })
-      .catch(() => {
+      .catch((error) => {
         setIsSending(false);
         setIsError(true);
+        console.log('FAILED...', error);
       });
       
   }
@@ -133,11 +135,11 @@ flex py-2 max-639:justify-center lg:text-3xl"
             </button>
           </div>
 
-          {isError && isSuccess && (
+          {isError && !isSuccess && (
   <p className="text-red-600 py-4">An error occurred, please try again.</p>
 )}
 
-{isSuccess && !isError && (
+{isSuccess && isError && (
   <p className="py-4 text-green-500">Message sent successfully!</p>
 )}
         </div>
