@@ -34,13 +34,14 @@ export default function ProjectsCarousel() {
         <p className="dark:text-mainSilver/80 text-mainExtraDarkBlue/70 md:text-xl">
           See what I'm able to create
         </p>
-        <button
+
+      </div>
+      <button
               onClick={scrollToPortfolioRef}
-              className={"primary-button mt-6 w-full"}
+              className={"primary-button mb-6 w-auto w-full"}
             >
               See my projects
             </button>
-      </div>
 
       <div className="shadow-md w-full">
         <Swiper
