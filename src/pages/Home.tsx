@@ -32,7 +32,7 @@ export default function Home() {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 0.5 }}>
-      <section className="p-8 min-w-full lg:p-16 flex items-center flex-col justify-center min-h-screen overflow-x-hidden" ref={homeRef}>
+      <section className="p-3 min-w-full lg:p-16 flex items-center flex-col justify-center min-h-screen overflow-x-hidden" ref={homeRef}>
         <article className="flex items-center flex-col text-center w-full">
           <div className="flex flex-col items-center lg:grid lg:grid-flow-col lg:gap-12 lg:justify-center lg:px-8 lg:12 py-6">
             <figure className="py-4">

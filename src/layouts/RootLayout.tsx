@@ -12,7 +12,7 @@ export default function RootLayout(){
     return(
         <>
         <Navbar/>
-        <main className="justify-center flex">
+        <main className="w-full! relative justify-center flex overflow-x-hidden!">
         <Outlet/>
         </main>
         <Footer/>

@@ -103,7 +103,7 @@ export default function Footer() {
       </ul>
 
       <ul className="flex gap-4 items-center justify-center m-auto mb-4">
-        <a href="https://twitter.com/FranLunDev">
+        <a href="https://twitter.com/CodingWithFran">
           <li className="">
             <div
               className="dark:bg-mainDarkBlue cursor-pointer
