@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="p-8 lg:p-6 fixed w-full z-50 dark:bg-mainExtraDarkBlue/90 bg-white/90 shadow-lg">
+      <header className="p-4 lg:p-4 fixed w-full z-50 dark:bg-mainExtraDarkBlue/90 bg-white/90 shadow-lg">
         <nav className="flex lg:justify-center items-center justify-between">
           <FaBars className="bars" onClick={toggleMenu} />
           <div className="p-4 lg:hidden">

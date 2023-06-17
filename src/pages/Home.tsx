@@ -1,10 +1,10 @@
-import personalImage from "../assets/testImage.jpg";
+import personalImage from "../assets/franciscoluna.jpg"
 import NavigationButton from "../components/Buttons/NavigationButton";
 import SkillsIcons from "../components/Icons/SkillIscons";
 import { motion } from "framer-motion";
 import { useContext } from "react";
 import { RefContext } from "../context/ScrollContext";
-import Me from "../assets/me.png"
+
 
 
 import "../utils/glowStyles.css";
@@ -32,7 +32,7 @@ export default function Home() {
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ duration: 0.5 }}>
-      <section className="p-3 min-w-full lg:p-16 flex items-center flex-col justify-center min-h-screen overflow-x-hidden" ref={homeRef}>
+      <section className="p-3 min-w-full lg:p-20 lg:mt-8 mt-16 flex items-center flex-col justify-center min-h-screen overflow-x-hidden" ref={homeRef}>
         <article className="flex items-center flex-col text-center w-full">
           <div className="flex flex-col items-center lg:grid lg:grid-flow-col lg:gap-12 lg:justify-center lg:px-8 lg:12 py-6">
             <figure className="py-4">
@@ -112,8 +112,6 @@ export default function Home() {
             </div>
           </div>
 
-
-            <img alt="Francisco Luna" className="bg-cover rounded-full h-72 mt-20 w-72 glow-main animate border-2 border-double main-image p-1 floating !z-0" src={Me}></img>
             <UIUXDesign />
             <Experience />
             <ProjectsCarousel />
