@@ -5,24 +5,19 @@ import { useState } from "react";
 import "../../styles/navbar.css";
 import { Toggle } from "../Switches/DarkModeSwitch";
 import "../../utils/glowStyles.css";
-import { RefObject } from "react";
-import Logo from "../../assets/dibujo-min.svg"
-import "../../index.css"
+import Logo from "../../assets/dibujo-min.svg";
+import "../../index.css";
 import { useContext } from "react";
 import { RefContext } from "../../context/ScrollContext";
 import { ScrollToComponent } from "../../hooks/ScrollToComponent";
 
-
-
 export default function Navbar() {
-
   const {
     homeRef,
     aboutRef,
     experienceRef,
     projectsRef,
     servicesRef,
-    portfolioRef,
     contactRef,
   } = useContext(RefContext);
   const scrollToHomeRef = ScrollToComponent({ rootRef: homeRef });
@@ -38,20 +33,25 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   }
 
-  function handleMobileScroll(scrollFunction: Function){
+  function handleMobileScroll(scrollFunction: Function) {
     toggleMenu();
     scrollFunction();
   }
 
   return (
     <>
-      <header className="p-4 lg:p-4 fixed w-full z-50 dark:bg-mainExtraDarkBlue/90 bg-white/90 shadow-lg">
+      <header className="p-4 lg:p-2 fixed w-full z-50 dark:bg-mainExtraDarkBlue/90 bg-white/90 shadow-lg">
         <nav className="flex lg:justify-center items-center justify-between">
           <FaBars className="bars" onClick={toggleMenu} />
           <div className="p-4 lg:hidden">
-                    <Toggle />
-                  </div>
-                  <img onClick={scrollToHomeRef} className="max-h-64 lg:hidden w-12 cursor-pointer" alt="Francisco Luna Logo" src={Logo}></img>
+            <Toggle />
+          </div>
+          <img
+            onClick={scrollToHomeRef}
+            className="max-h-64 lg:hidden w-12 cursor-pointer"
+            alt="Francisco Luna Logo"
+            src={Logo}
+          ></img>
 
           <AnimatePresence>
             {isMenuOpen && (
@@ -109,7 +109,6 @@ export default function Navbar() {
                     Contact
                   </NavLink>
 
-
                   <div className="w-full" onClick={toggleMenu}>
                     <a
                       href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU"
@@ -141,7 +140,11 @@ export default function Navbar() {
             <NavLink className="nav-link" to="/" onClick={scrollToAboutRef}>
               About
             </NavLink>
-                        <NavLink className="nav-link" onClick={scrollToExperienceRef} to="/">
+            <NavLink
+              className="nav-link"
+              onClick={scrollToExperienceRef}
+              to="/"
+            >
               Skills
             </NavLink>
             <NavLink className="nav-link" onClick={scrollToProjectsRef} to="/">
@@ -158,14 +161,22 @@ export default function Navbar() {
                 href="https://drive.google.com/uc?export=download&id=1Ce8DzNarxyxFFP174BPCq-3tpYOP8oqU"
                 download=""
               >
-                
-                <button className={"primary-button px-8 py-4"}>Spanish CV</button>
+                <button
+                  className={
+                    "border-2 text-white rounded-lg border-mainCyan hover:text-mainCyan duration-200 !py-2 px-8"
+                  }
+                >
+                  Spanish CV
+                </button>
               </a>
-              
             </div>
 
-              <img onClick={scrollToHomeRef} className="max-h-64 w-12 h-16 cursor-pointer" alt="Francisco Luna Logo" src={Logo}></img>
-
+            <img
+              onClick={scrollToHomeRef}
+              className="max-h-64 w-12 h-16 cursor-pointer"
+              alt="Francisco Luna Logo"
+              src={Logo}
+            ></img>
           </section>
         </nav>
       </header>

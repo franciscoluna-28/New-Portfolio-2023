@@ -1,4 +1,3 @@
-import { Icon } from "@fortawesome/fontawesome-svg-core";
 import { Technology } from "../../data/experienceDatabase";
 
 
@@ -14,7 +13,7 @@ export default function Cards({ bannerName, id, technologies }: Technology) {
           <h4 className="font-bold dark:text-mainCyan text-mainDarkCyan text-xl">
             {bannerName}
           </h4>
-          <ul className="grid grid-flow-col grid-rows-6 gap-12 py-6">
+          <ul className="grid grid-flow-col grid-rows-6 gap-12 py-4">
             {technologies.map((technology) => {
                 const Icon = technology.icon
               return (
@@ -26,7 +25,6 @@ export default function Cards({ bannerName, id, technologies }: Technology) {
                       
                       <Icon className="text-mainDarkCyan dark:text-mainCyan text-3xl" />
                     </div>
-                    <p className="dark:text-mainSilver font-semibold text-mainExtraDarkBlue/70 pt-2">{technology.level}</p>
                   </div>
                 </li>
               );

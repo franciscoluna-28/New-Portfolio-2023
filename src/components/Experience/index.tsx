@@ -13,7 +13,7 @@ export default function Experience() {
           className="font-bold text-4xl lex text-left max-639:justify-center max-639:text-4xl main
          text-mainExtraDarkBlue dark:text-white lg:text-5xl"
         >
-          My Experience
+          Skills
         </h3>
         <h4
           className="text-mainDarkCyan text-2xl dark:text-mainCyan font-bold text-left 
@@ -21,7 +21,7 @@ export default function Experience() {
         >
           And Knowledge
         </h4>
-        <p className="dark:text-mainSilver/80 text-mainExtraDarkBlue/70 md:text-xl">
+        <p className="dark:text-mainSilver/80 text-mainExtraDarkBlue/70 md:text-lg">
           Learn about my tech stack and the tools I use
         </p>
       </div>

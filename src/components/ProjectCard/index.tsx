@@ -40,9 +40,9 @@ export default function ProjectCard({
   const isValidNetlifyLink = netlifyLinkRegex.test(deploymentLink);
 
   return (
-    <div className="card w-auto min-h-full max-w-2xl shadow-xl dark:bg-gradient-to-r dark:hover:border-mainCyan border-4 dark:hover:shadow-mainCyan/10 dark:border-mainDarkBlue/10 border-transparent dark:from-mainDarkBlue/50 dark:to-mainDarkBlue/30 ease-in">
+    <div className="card w-auto max-w-md h-full shadow-xl dark:bg-gradient-to-r dark:hover:border-mainCyan border-4 dark:hover:shadow-mainCyan/10 dark:border-mainDarkBlue/10 dark:from-mainDarkBlue/50 dark:to-mainDarkBlue/30 ease-in">
       <figure>
-        <img className="" src={image} alt="Project" />
+        <img className=" max-h-48 w-full" src={image} alt="Project" />
       </figure>
       <div className="card-body">
         <h2 className="card-title dark:text-white text-black font-bol">
@@ -51,7 +51,7 @@ export default function ProjectCard({
             {mainTechnology}
           </div>
         </h2>
-        <p className="my-2 text-lg leading-loose dark:text-mainSilver/50 text-mainExtraDarkBlue/60 text-left">
+        <p className="my-2 text-sm leading-loose dark:text-mainSilver/50 text-mainExtraDarkBlue/60 text-left">
           {description}
         </p>
         <div className="card-actions justify-end flex-col w-full">

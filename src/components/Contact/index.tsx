@@ -16,7 +16,7 @@ export default function Contact() {
     const scrollToMailerRef = ScrollToComponent({ rootRef: emailRef });
 
     return(
-        <div className="py-20 w-full">
+        <div className="py-12 w-full">
 
             <div className="flex flex-col justify-center items-center py-12">
               <h3

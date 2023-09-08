@@ -19,7 +19,7 @@ export function FilterByMainTechnology() {
       <div>
         <button
           type="button"
-          className="inline-flex justify-center w-full px-4 text-sm text-mainExtraDarkBlue dark:bg-mainDarkBlue/50 dark:text-white font-semibold
+          className="inline-flex justify-center w-full px-4 text-lg text-mainExtraDarkBlue dark:bg-mainDarkBlue/40 dark:text-white font-semibold
            rounded-md shadow-md dark:hover:bg-mainDarkBlue/20 focus:outline-none h-16 items-center focus:ring-2 ring-mainExtraDarkBlue/50"
           id="filter-menu"
           aria-haspopup="true"

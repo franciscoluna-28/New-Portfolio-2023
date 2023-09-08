@@ -24,7 +24,7 @@ export default function Footer() {
   const scrollToContactRef = ScrollToComponent({ rootRef: contactRef });
 
   return (
-    <footer className="flex flex-col w-full h-auto shadow-xl bg-mainDarkCyan px-8 py-8 dark:bg-mainDarkBlue/50">
+    <footer className="flex flex-col w-full h-auto shadow-xl bg-mainDarkCyan px-8 py-8 dark:bg-mainDarkBlue/40">
       <h5 className="text-white font-semibold text-2xl m-auto mb-4 dark:hover:text-mainCyan hover:text-mainExtraDarkBlue/80 duration-500 cursor-pointer">
         Francisco Luna
       </h5>
