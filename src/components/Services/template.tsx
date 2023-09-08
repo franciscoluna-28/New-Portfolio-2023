@@ -18,7 +18,7 @@ export default function ServiceCard ({title, id, features}: Service) {
               <div className="w-10">
                 <BsCheck className="dark:text-mainCyan text-mainDarkCyan text-start text-lg" />
               </div>
-              <p className="dark:text-mainSilver font-semibold text-mainExtraDarkBlue/90 text-left">
+              <p className="dark:text-mainSilver font-normal leading-normal text-mainExtraDarkBlue text-left">
                 {feature.description}
               </p>
             </li>
