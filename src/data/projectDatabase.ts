@@ -24,7 +24,7 @@ export const createdProjects: Array<project> = [
     githubLink:
       "https://github.com/franciscoluna-28/Weather-App-React-and-TailwindCSS",
     deploymentLink: "https://weather-app-tailwind-react.netlify.app",
-    tags: ["Hooks", "TaiwlindCSS", "API"],
+    tags: ["Hooks", "TailwindCSS", "Rest API"],
     mainTechnology: "React",
     id: 2,
   },
