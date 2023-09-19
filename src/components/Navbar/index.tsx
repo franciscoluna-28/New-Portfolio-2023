@@ -163,7 +163,7 @@ export default function Navbar() {
               >
                 <button
                   className={
-                    "border-2 text-white rounded-lg border-mainCyan hover:text-mainCyan duration-200 !py-2 px-8"
+                    "border-2 dark:text-white border-mainDarkCyan rounded-lg dark:border-mainCyan text-mainExtraDarkBlue dark:hover:text-mainCyan duration-200 !py-2 px-8"
                   }
                 >
                   Spanish CV
